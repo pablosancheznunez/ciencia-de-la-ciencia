@@ -1,0 +1,79 @@
+---
+engine: markdown
+---
+
+# Laboratorio interactivo {#sec-laboratorio}
+
+Este apéndice reúne laboratorios y actividades para practicar las ideas del libro con simulaciones que se ejecutan en tu navegador.
+
+## Laboratorio: la maldición del ganador y la replicación {#lab-ganador}
+
+::: {.laboratorio}
+::: {.laboratorio-etiqueta}
+Laboratorio · se ejecuta en tu navegador
+:::
+
+Si solo se publican los resultados significativos, los efectos publicados están **inflados**, sobre todo con muestras pequeñas. Elige el efecto real y el tamaño de muestra: el laboratorio simula 2000 estudios, «publica» los significativos y calcula qué pasaría al replicarlos.
+
+```{ojs}
+//| echo: false
+rangoG = window.Lab.rango
+viewof dReal = rangoG("Efecto real (d de Cohen)", [0.1, 0.8], {step: 0.05, value: 0.3, formato: (x) => x.toFixed(2).replace(".", ",")})
+viewof nGrupo = rangoG("Participantes por grupo", [10, 200], {step: 5, value: 30})
+```
+
+```{ojs}
+//| echo: false
+{
+  let semilla = 12345; const azar = () => { semilla |= 0; semilla = semilla + 0x6D2B79F5 | 0; let t = Math.imul(semilla ^ semilla >>> 15, 1 | semilla); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+  const normal = () => Math.sqrt(-2 * Math.log(1 - azar())) * Math.cos(2 * Math.PI * azar());
+  const Phi = (z) => { const t = 1 / (1 + 0.2316419 * Math.abs(z)), d = 0.3989423 * Math.exp(-z * z / 2); const p = d * t * (0.3193815 + t * (-0.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274)))); return z > 0 ? 1 - p : p; };
+  const se = Math.sqrt(2 / nGrupo);
+  const est = Array.from({length: 2000}, () => dReal + se * normal());
+  const sig = est.filter((d) => d / se > 1.96);
+  const potencia = sig.length / est.length;
+  const dPub = sig.length ? sig.reduce((a, b) => a + b, 0) / sig.length : NaN;
+  const potRep = 1 - Phi(1.96 - dReal / se);
+  const nPlan = Math.ceil(2 * Math.pow((1.96 + 0.84) / dPub, 2));
+  const potPlan = 1 - Phi(1.96 - dReal / Math.sqrt(2 / nPlan));
+  const lo = -0.6, hi = 1.6, bins = 44, w = (hi - lo) / bins, cuenta = Array(bins).fill(0), cuentaS = Array(bins).fill(0);
+  est.forEach((d) => { const i = Math.floor((d - lo) / w); if (i >= 0 && i < bins) { cuenta[i]++; if (d / se > 1.96) cuentaS[i]++; } });
+  const mx = Math.max(...cuenta), W = 640, H = 220, x = (v) => 30 + (v - lo) / (hi - lo) * (W - 50), y = (c) => H - 30 - c / mx * (H - 50);
+  let svg = `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:680px" role="img" aria-label="Histograma de 2000 efectos estimados; los significativos se muestran en color oscuro" font-family="inherit">`;
+  cuenta.forEach((c, i) => { const x0 = x(lo + i * w); svg += `<rect x="${x0}" y="${y(c)}" width="${x(lo + (i + 1) * w) - x0 - 1}" height="${H - 30 - y(c)}" fill="#c9cfd6"/><rect x="${x0}" y="${y(cuentaS[i])}" width="${x(lo + (i + 1) * w) - x0 - 1}" height="${H - 30 - y(cuentaS[i])}" fill="#2a78d6"/>`; });
+  svg += `<line x1="30" x2="${W - 20}" y1="${H - 30}" y2="${H - 30}" stroke="currentColor"/>`;
+  [0, 0.5, 1, 1.5].forEach((v) => svg += `<text x="${x(v)}" y="${H - 12}" font-size="12" text-anchor="middle" fill="currentColor">${String(v).replace(".", ",")}</text>`);
+  svg += `<line x1="${x(dReal)}" x2="${x(dReal)}" y1="10" y2="${H - 30}" stroke="#b3261e" stroke-width="2" stroke-dasharray="5 3"/><text x="${x(dReal) + 4}" y="22" font-size="12" fill="#b3261e">efecto real</text>`;
+  if (!isNaN(dPub)) svg += `<line x1="${x(dPub)}" x2="${x(dPub)}" y1="30" y2="${H - 30}" stroke="#1c6b3a" stroke-width="2"/><text x="${x(dPub) + 4}" y="42" font-size="12" fill="#1c6b3a">media publicada</text>`;
+  svg += "</svg>";
+  const f = (v, k = 2) => v.toFixed(k).replace(".", ",");
+  const d = html`<div role="status" aria-live="polite"></div>`;
+  d.innerHTML = `${svg}<p class="small">Gris: todos los estudios. Azul: los significativos (p &lt; 0,05), que son los que se «publican».</p>
+  <ul><li>Potencia del diseño: <strong>${Math.round(potencia * 100)} %</strong> de los estudios salen significativos.</li>
+  <li>Efecto medio publicado: <strong>${isNaN(dPub) ? "—" : f(dPub)}</strong>, frente al real ${f(dReal)}: ${isNaN(dPub) ? "" : `<strong>${f(dPub / dReal, 1)} veces mayor</strong>`}.</li>
+  <li>Una réplica con la misma muestra solo saldría significativa el <strong>${Math.round(potRep * 100)} %</strong> de las veces.</li>
+  <li>Si planificas la réplica para tener un 80 % de potencia con el efecto publicado, usarías ${isNaN(nPlan) ? "—" : nPlan} por grupo, pero su potencia real sería del <strong>${Math.round(potPlan * 100)} %</strong>.</li></ul>
+  <p>${potencia < 0.5 ? "Con poca potencia, lo publicado exagera el efecto y las réplicas «fracasan» aunque el efecto exista. Planifica las réplicas con un efecto más prudente (por ejemplo, la mitad del publicado) o con el menor efecto de interés." : "Con potencia alta, la inflación es pequeña: los resultados publicados se parecen al efecto real."}</p>`;
+  return d;
+}
+```
+:::
+
+## Actividad: ¿práctica cuestionable o correcta?
+
+::: {.clasificar #ia-lab-qrp titulo="Clasifica cada decisión" categorias="p-hacking|HARKing|Publicación selectiva|Práctica correcta"}
+- Probar tres formas de eliminar valores atípicos y quedarse con la que da p < 0,05 → p-hacking // Decisión analítica tomada a la vista del resultado.
+- Presentar como hipótesis previa un hallazgo descubierto al explorar los datos → HARKing // Hypothesizing After the Results are Known.
+- Guardar en un cajón los estudios que no salieron significativos → Publicación selectiva // Es el «efecto cajón».
+- Añadir participantes hasta que el resultado sea significativo → p-hacking // Parada opcional sin corrección.
+- Medir cinco resultados e informar solo del que funcionó → Publicación selectiva // Notificación selectiva de resultados.
+- Preregistrar el plan de análisis y señalar las desviaciones en el artículo → Práctica correcta // Hace visibles las decisiones.
+- Presentar un análisis no previsto etiquetándolo como exploratorio → Práctica correcta // Es transparente sobre su naturaleza.
+- Contar después que «ya se esperaba» un efecto en un subgrupo que salió por casualidad → HARKing // Reescribe la historia de la hipótesis.
+:::
+
+## Para ver y seguir aprendiendo
+
+Son enlaces, no vídeos incrustados: el vídeo se abre en la web de quien lo publica, así esta página no carga rastreadores de terceros. La mayoría está en inglés; activa los subtítulos si los necesitas.
+
+- **[Is Most Published Research Wrong?](https://www.youtube.com/watch?v=42QuXLucH3Q)** — Veritasium (2016). Unos 12 minutos sobre valores p, p-hacking y la crisis de replicación, a partir del artículo de Ioannidis (2005).

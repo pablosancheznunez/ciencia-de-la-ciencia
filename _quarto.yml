@@ -57,6 +57,7 @@ book:
     - 11-sintesis.qmd
     - 12-disenos.qmd
   appendices:
+  - 94-laboratorio.qmd
   - 91-guia-docente.qmd
   - 92-glosario.qmd
 lang: es
