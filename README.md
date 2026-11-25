@@ -9,7 +9,7 @@ Libro abierto e interactivo para doctorandos y personal investigador: cómo se m
 
 ## Cita
 
-Sánchez-Núñez, P. (2026). *Ciencia de la ciencia y metaciencia: investigar sobre la investigación*. Universidad Carlos III de Madrid. Zenodo.
+Sánchez-Núñez, P. (2026). *Ciencia de la ciencia y metaciencia: investigar sobre la investigación*. Universidad Carlos III de Madrid. Zenodo. <https://doi.org/10.5281/zenodo.24528120>
 
 ## Licencia
 

@@ -23,6 +23,7 @@ book:
   date-format: D [de] MMMM [de] YYYY
   language: es
   site-url: https://pablosancheznunez.com/ciencia-de-la-ciencia/
+  doi: 10.5281/zenodo.24528120
   search: true
   page-navigation: true
   sidebar:
