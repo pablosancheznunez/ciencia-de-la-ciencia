@@ -40,21 +40,21 @@ jobs:
         run: quarto render
 
       - name: Ejercicios de webR
-        run: python herramientas/pruebas/ejercicios.py . 60 00-r-en-el-libro.qmd 02-medir.qmd 03-reproducibilidad.qmd 04-practicas.qmd
+        run: python herramientas/pruebas/ejercicios.py . 60 00-r-en-el-libro.qmd 02-medir.qmd 03-reproducibilidad.qmd 04-practicas.qmd 07-fuentes.qmd 08-bibliometria.qmd 09-redes.qmd 10-textos.qmd 11-sintesis.qmd 12-disenos.qmd
 
       - name: Preguntas de autoevaluación
-        run: python herramientas/pruebas/autoevaluacion.py _book index.html 00-r-en-el-libro.html 01-que-es.html 02-medir.html 03-reproducibilidad.html 04-practicas.html 05-reformas.html 06-evaluacion.html 91-guia-docente.html 92-glosario.html
+        run: python herramientas/pruebas/autoevaluacion.py _book index.html 00-r-en-el-libro.html 01-que-es.html 02-medir.html 03-reproducibilidad.html 04-practicas.html 05-reformas.html 06-evaluacion.html 07-fuentes.html 08-bibliometria.html 09-redes.html 10-textos.html 11-sintesis.html 12-disenos.html 91-guia-docente.html 92-glosario.html
 
       - name: Accesibilidad (axe-core, WCAG 2.1 AA)
         env:
           AXE_JS: node_modules/axe-core/axe.min.js
-        run: python herramientas/pruebas/accesibilidad.py _book index.html 00-r-en-el-libro.html 01-que-es.html 02-medir.html 03-reproducibilidad.html 04-practicas.html 05-reformas.html 06-evaluacion.html 91-guia-docente.html 92-glosario.html
+        run: python herramientas/pruebas/accesibilidad.py _book index.html 00-r-en-el-libro.html 01-que-es.html 02-medir.html 03-reproducibilidad.html 04-practicas.html 05-reformas.html 06-evaluacion.html 07-fuentes.html 08-bibliometria.html 09-redes.html 10-textos.html 11-sintesis.html 12-disenos.html 91-guia-docente.html 92-glosario.html
 
       - name: Accesibilidad en modo oscuro
         env:
           AXE_JS: node_modules/axe-core/axe.min.js
           MODO: oscuro
-        run: python herramientas/pruebas/accesibilidad.py _book index.html 00-r-en-el-libro.html 01-que-es.html 02-medir.html 03-reproducibilidad.html 04-practicas.html 05-reformas.html 06-evaluacion.html 91-guia-docente.html 92-glosario.html
+        run: python herramientas/pruebas/accesibilidad.py _book index.html 00-r-en-el-libro.html 01-que-es.html 02-medir.html 03-reproducibilidad.html 04-practicas.html 05-reformas.html 06-evaluacion.html 07-fuentes.html 08-bibliometria.html 09-redes.html 10-textos.html 11-sintesis.html 12-disenos.html 91-guia-docente.html 92-glosario.html
 
       - uses: actions/upload-artifact@v4
         if: always()

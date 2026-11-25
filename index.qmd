@@ -6,11 +6,13 @@ engine: markdown
 
 La ciencia es la forma más fiable que hemos inventado para conocer el mundo, y también es una actividad humana: tiene incentivos, sesgos, modas y fallos. La **ciencia de la ciencia** (*science of science*) estudia con métodos científicos cómo se produce, se comunica y se evalúa el conocimiento. La **investigación sobre la investigación** (*research on research*, RoR) y la **metaciencia** ponen el foco en mejorarla: detectar qué falla y comprobar si las reformas funcionan.
 
+El libro tiene dos partes. La **primera** presenta los fundamentos: qué es el campo, cómo se mide la ciencia, la crisis de reproducibilidad, las prácticas cuestionables, las reformas y la evaluación. La **segunda** reúne las **técnicas y metodologías** con las que se investiga la investigación: fuentes de datos, bibliometría e indicadores, redes y mapas, minería de textos y modelos de lenguaje, revisiones sistemáticas y metaanálisis, detección de sesgos y diseños causales, replicaciones, análisis multiverso y métodos cualitativos y mixtos, con ejemplos resueltos sobre datos reales de OpenAlex.
+
 Este libro está pensado para doctorandos y personal investigador de cualquier disciplina. Al terminarlo sabrás leer críticamente un indicador bibliométrico, estimar cuánto puedes fiarte de un resultado publicado, reconocer las prácticas cuestionables (incluidas las tuyas) y elegir las prácticas abiertas que hacen tu trabajo más creíble.
 
 ::: {.callout-note appearance="simple" icon="false"}
 ## Cómo citar este libro
-> Sánchez-Núñez, P. (2026). *Ciencia de la ciencia y metaciencia: investigar sobre la investigación*. Universidad Carlos III de Madrid. Zenodo. <https://doi.org/10.5281/zenodo.24528120>
+> Sánchez-Núñez, P. (2026). *Investigación sobre la investigación: ciencia de la ciencia, metaciencia y sus métodos*. Universidad Carlos III de Madrid. Zenodo. <https://doi.org/10.5281/zenodo.24528120>
 
 **Autor:** Pablo Sánchez-Núñez ([ORCID 0000-0001-7845-9506](https://orcid.org/0000-0001-7845-9506)), Universidad Carlos III de Madrid. **DOI:** [10.5281/zenodo.24528120](https://doi.org/10.5281/zenodo.24528120). Texto bajo licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es).
 :::
@@ -19,12 +21,20 @@ Este libro está pensado para doctorandos y personal investigador de cualquier d
 
 | Capítulo | Pregunta |
 |---|---|
+| **Parte I. Fundamentos** | |
 | [1. Qué es la ciencia de la ciencia](01-que-es.qmd) | ¿Cómo se estudia científicamente la propia ciencia? |
 | [2. Medir la ciencia](02-medir.qmd) | ¿Qué miden (y qué no) las citas y los indicadores? |
 | [3. La crisis de reproducibilidad](03-reproducibilidad.qmd) | ¿Cuánto podemos fiarnos de un resultado publicado? |
 | [4. Prácticas cuestionables y sesgos](04-practicas.qmd) | ¿Cómo se fabrican falsos positivos sin hacer trampa a propósito? |
 | [5. Ciencia abierta y reformas](05-reformas.qmd) | ¿Qué cambios mejoran la credibilidad y qué pruebas hay? |
 | [6. Evaluar la investigación](06-evaluacion.qmd) | ¿Cómo evaluar de forma responsable personas, proyectos e instituciones? |
+| **Parte II. Técnicas y metodologías** | |
+| [7. Fuentes de datos e infraestructuras](07-fuentes.qmd) | ¿De dónde salen los datos y qué sesgos tienen? |
+| [8. Bibliometría e indicadores](08-bibliometria.qmd) | ¿Cómo contar y normalizar producción e impacto con responsabilidad? |
+| [9. Redes y mapas de la ciencia](09-redes.qmd) | ¿Cómo se relacionan documentos, personas y temas? |
+| [10. Minería de textos y modelos de lenguaje](10-textos.qmd) | ¿Cómo analizar miles de textos científicos y validar el resultado? |
+| [11. Síntesis de la evidencia y sesgos](11-sintesis.qmd) | ¿Cómo revisar, metaanalizar y detectar sesgo de publicación y errores? |
+| [12. Diseños de investigación](12-disenos.qmd) | ¿Cómo estimar efectos causales y medir la incertidumbre analítica? |
 
 ## Cómo está organizado cada capítulo
 

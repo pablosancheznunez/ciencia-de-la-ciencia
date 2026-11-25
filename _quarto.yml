@@ -12,8 +12,8 @@ project:
   - moodle
   - sw.js
 book:
-  title: Ciencia de la ciencia y metaciencia
-  subtitle: 'Investigar sobre la investigación: medición, reproducibilidad y reforma'
+  title: Investigación sobre la investigación
+  subtitle: Ciencia de la ciencia, metaciencia y sus métodos
   author:
   - name: Pablo Sánchez-Núñez
     orcid: 0000-0001-7845-9506
@@ -40,7 +40,7 @@ book:
   chapters:
   - index.qmd
   - 00-r-en-el-libro.qmd
-  - part: Capítulos
+  - part: Parte I. Fundamentos
     chapters:
     - 01-que-es.qmd
     - 02-medir.qmd
@@ -48,6 +48,14 @@ book:
     - 04-practicas.qmd
     - 05-reformas.qmd
     - 06-evaluacion.qmd
+  - part: Parte II. Técnicas y metodologías
+    chapters:
+    - 07-fuentes.qmd
+    - 08-bibliometria.qmd
+    - 09-redes.qmd
+    - 10-textos.qmd
+    - 11-sintesis.qmd
+    - 12-disenos.qmd
   appendices:
   - 91-guia-docente.qmd
   - 92-glosario.qmd
@@ -86,3 +94,5 @@ webr:
   - webr-repo
   resources:
   - datos
+  packages:
+  - jsonlite

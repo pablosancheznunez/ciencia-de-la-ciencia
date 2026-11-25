@@ -131,3 +131,123 @@ Evaluación de un trabajo o una propuesta por especialistas del área. → [Cap�
 
 ### CRediT {#gl-credit}
 Taxonomía de 14 roles para declarar la contribución de cada persona a un trabajo. → [Capítulo 6](06-evaluacion.qmd)
+
+## Fuentes de datos
+
+### Base de datos bibliográfica {#gl-basebib}
+Fuente que indexa publicaciones con sus metadatos y, a menudo, sus citas (Web of Science, Scopus, Dimensions, OpenAlex). → [Capítulo 7](07-fuentes.qmd)
+
+### Cobertura {#gl-cobertura}
+Conjunto de documentos, campos, idiomas y años que recoge una fuente. → [Capítulo 7](07-fuentes.qmd)
+
+### Identificador persistente {#gl-pid}
+Código estable que identifica sin ambigüedad un objeto, persona u organización (DOI, ORCID, ROR). → [Capítulo 7](07-fuentes.qmd)
+
+### Desambiguación de autores {#gl-desambiguacion}
+Asignación correcta de las publicaciones a cada persona pese a homónimos y variantes del nombre. → [Capítulo 7](07-fuentes.qmd)
+
+### Metadatos abiertos {#gl-metabiertos}
+Metadatos de la investigación que cualquiera puede reutilizar sin restricciones. → [Capítulo 7](07-fuentes.qmd)
+
+## Bibliometría e indicadores
+
+### Recuento completo {#gl-completo}
+Cada unidad que participa en un trabajo suma una publicación completa. → [Capítulo 8](08-bibliometria.qmd)
+
+### Recuento fraccionario {#gl-fraccionario}
+El trabajo se reparte entre las unidades participantes, de modo que la suma es uno. → [Capítulo 8](08-bibliometria.qmd)
+
+### MNCS {#gl-mncs}
+Media de las citaciones normalizadas por campo, año y tipo de documento de un conjunto de trabajos. → [Capítulo 8](08-bibliometria.qmd)
+
+### Indicador de percentil {#gl-percentil}
+Proporción de trabajos de una unidad que están entre los más citados de su campo y año, como PP(top 10 %). → [Capítulo 8](08-bibliometria.qmd)
+
+### Ventana de citación {#gl-ventana}
+Periodo fijo tras la publicación en el que se cuentan las citas. → [Capítulo 8](08-bibliometria.qmd)
+
+## Redes y mapas
+
+### Cocitación {#gl-cocitacion}
+Relación entre dos documentos citados juntos por un tercero. → [Capítulo 9](09-redes.qmd)
+
+### Acoplamiento bibliográfico {#gl-acoplamiento}
+Relación entre dos documentos que comparten referencias. → [Capítulo 9](09-redes.qmd)
+
+### Red de coautoría {#gl-coautoria}
+Red en la que personas, instituciones o países se unen al firmar juntos. → [Capítulo 9](09-redes.qmd)
+
+### Centralidad {#gl-centralidad}
+Medida de la importancia de un nodo en una red (grado, intermediación…). → [Capítulo 9](09-redes.qmd)
+
+### Detección de comunidades {#gl-comunidades}
+Algoritmos que agrupan los nodos más conectados entre sí (Louvain, Leiden). → [Capítulo 9](09-redes.qmd)
+
+### Mapa de la ciencia {#gl-mapa}
+Representación visual de la estructura de un campo a partir de redes bibliométricas. → [Capítulo 9](09-redes.qmd)
+
+## Textos
+
+### Tokenización {#gl-token}
+División de un texto en unidades de análisis. → [Capítulo 10](10-textos.qmd)
+
+### tf-idf {#gl-tfidf}
+Ponderación que valora los términos frecuentes en un documento pero raros en el corpus. → [Capítulo 10](10-textos.qmd)
+
+### Modelo de temas {#gl-temas}
+Modelo que descubre grupos de palabras que coaparecen (LDA, STM). → [Capítulo 10](10-textos.qmd)
+
+### Embedding {#gl-embedding}
+Representación de un texto como vector numérico que captura su significado. → [Capítulo 10](10-textos.qmd)
+
+### Validación {#gl-validacion}
+Contraste de una medida automática con una codificación humana de referencia. → [Capítulo 10](10-textos.qmd)
+
+### Precisión y exhaustividad {#gl-precision}
+Proporción de aciertos entre lo marcado (precisión) y entre lo existente (exhaustividad). → [Capítulo 10](10-textos.qmd)
+
+## Síntesis de la evidencia
+
+### Revisión sistemática {#gl-sistematica}
+Revisión con protocolo, búsqueda exhaustiva y criterios explícitos. → [Capítulo 11](11-sintesis.qmd)
+
+### Revisión de alcance {#gl-alcance}
+Revisión que mapea qué se ha investigado y cómo (scoping review). → [Capítulo 11](11-sintesis.qmd)
+
+### Metaanálisis {#gl-metaanalisis}
+Combinación estadística de los resultados de varios estudios. → [Capítulo 11](11-sintesis.qmd)
+
+### Heterogeneidad {#gl-heterogeneidad}
+Variación de los efectos entre estudios más allá del azar (τ², I²). → [Capítulo 11](11-sintesis.qmd)
+
+### Gráfico de embudo {#gl-embudo}
+Gráfico del efecto de cada estudio frente a su precisión, para detectar asimetrías. → [Capítulo 11](11-sintesis.qmd)
+
+### p-curve {#gl-pcurve}
+Análisis de la distribución de los valores p significativos para valorar si hay un efecto real. → [Capítulo 11](11-sintesis.qmd)
+
+### Prueba GRIM {#gl-grim}
+Comprobación de si una media de datos enteros es posible con el tamaño muestral declarado. → [Capítulo 11](11-sintesis.qmd)
+
+## Diseños de investigación
+
+### Inferencia causal {#gl-causal}
+Estimación del efecto de una intervención frente a lo que habría ocurrido sin ella. → [Capítulo 12](12-disenos.qmd)
+
+### Experimento de campo {#gl-campo}
+Experimento aleatorizado en un entorno real. → [Capítulo 12](12-disenos.qmd)
+
+### Diferencias en diferencias {#gl-did}
+Comparación del cambio antes y después entre un grupo afectado y otro no afectado. → [Capítulo 12](12-disenos.qmd)
+
+### Regresión discontinua {#gl-rd}
+Comparación de casos justo a ambos lados de un umbral de asignación. → [Capítulo 12](12-disenos.qmd)
+
+### Muchos analistas {#gl-analistas}
+Diseño en el que varios equipos analizan los mismos datos para responder la misma pregunta. → [Capítulo 12](12-disenos.qmd)
+
+### Análisis multiverso {#gl-multiverso}
+Ejecución de todas las combinaciones razonables de decisiones analíticas. → [Capítulo 12](12-disenos.qmd)
+
+### Métodos mixtos {#gl-mixtos}
+Combinación de métodos cuantitativos y cualitativos en un mismo estudio. → [Capítulo 12](12-disenos.qmd)

@@ -4,7 +4,9 @@ engine: markdown
 
 # Guía para el profesorado {#sec-guia}
 
-Este libro sirve como manual de un curso o seminario de doctorado de unas 20-30 horas sobre ciencia de la ciencia y metaciencia, o como lectura autónoma. Cada capítulo equivale a una sesión de 3-4 horas con lectura previa.
+Este libro sirve como manual de un curso de doctorado de unas 40-48 horas sobre investigación sobre la investigación, o de dos cursos independientes: **Fundamentos** (parte I, capítulos 1-6) y **Métodos de la metaciencia** (parte II, capítulos 7-12). También puede leerse de forma autónoma. Cada capítulo equivale a una sesión de 3-4 horas con lectura previa.
+
+La parte II usa un conjunto de datos real descargado de OpenAlex (`datos/metaciencia_openalex.json`: los 80 artículos más citados que citan a la Open Science Collaboration, 2015) para que todos los métodos se practiquen sobre los mismos datos. Los retos de la parte II están pensados para que cada estudiante pueda hacerlos solo, con datos existentes y codificación propia.
 
 ## Propuesta de evaluación
 

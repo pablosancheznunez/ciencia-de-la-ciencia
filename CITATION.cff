@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: Si usas este libro, cítalo así.
 type: book
-title: Ciencia de la ciencia y metaciencia
-version: 1.0.0
+title: 'Investigación sobre la investigación: ciencia de la ciencia, metaciencia y sus métodos'
+version: 1.1.0
 doi: "10.5281/zenodo.24528120"
 identifiers:
   - type: doi
@@ -11,7 +11,7 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.24528121"
     description: "DOI de la versión 1.0.0"
-date-released: '2026-11-25'
+date-released: 2026-11-25
 license: CC-BY-4.0
 url: https://pablosancheznunez.com/ciencia-de-la-ciencia/
 repository-code: https://github.com/pablosancheznunez/ciencia-de-la-ciencia

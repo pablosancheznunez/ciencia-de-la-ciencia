@@ -1,0 +1,228 @@
+---
+engine: markdown
+---
+
+# Capítulo 11. Síntesis de la evidencia y detección de sesgos {#sec-cap11}
+
+::: {.callout-note appearance="default"}
+## Objetivos
+- Diseñar revisiones sistemáticas y de alcance siguiendo PRISMA 2020.
+- Calcular e interpretar un metaanálisis de efectos fijos y aleatorios y su heterogeneidad.
+- Aplicar técnicas de metaciencia para detectar sesgo de publicación y errores (embudo, Egger, p-curve, GRIM, statcheck).
+:::
+
+::: {.callout-note appearance="simple" icon="false"}
+## Glosario del capítulo
+[Revisión sistemática](92-glosario.qmd#gl-sistematica) · [Revisión de alcance](92-glosario.qmd#gl-alcance) · [Metaanálisis](92-glosario.qmd#gl-metaanalisis) · [Heterogeneidad](92-glosario.qmd#gl-heterogeneidad) · [Gráfico de embudo](92-glosario.qmd#gl-embudo) · [p-curve](92-glosario.qmd#gl-pcurve) · [Prueba GRIM](92-glosario.qmd#gl-grim)
+:::
+
+::: {.callout-tip appearance="simple" icon="false"}
+## Descargas
+[Plantilla de entrega del reto (.qmd)](plantillas/entrega_reto.qmd){.btn .btn-outline-primary .btn-sm download="entrega_reto.qmd"}
+:::
+
+## Lectura obligatoria
+
+::: {.lectura}
+Page, M. J.; McKenzie, J. E.; Bossuyt, P. M.; Boutron, I.; Hoffmann, T. C. et al. (2021). [The PRISMA 2020 statement: An updated guideline for reporting systematic reviews](https://doi.org/10.1136/bmj.n71). *BMJ*, 372, n71.
+:::
+
+### Lecturas complementarias {.unnumbered}
+
+- Egger, M.; Davey Smith, G.; Schneider, M.; Minder, C. (1997). [Bias in meta-analysis detected by a simple, graphical test](https://doi.org/10.1136/bmj.315.7109.629). *BMJ*, 315(7109), 629-634.
+- Simonsohn, U.; Nelson, L. D.; Simmons, J. P. (2014). [P-curve: A key to the file-drawer](https://doi.org/10.1037/a0033242). *Journal of Experimental Psychology: General*, 143(2), 534-547.
+- Brown, N. J. L.; Heathers, J. A. J. (2017). [The GRIM test: A simple technique detects numerous anomalies in the reporting of results in psychology](https://doi.org/10.1177/1948550616673876). *Social Psychological and Personality Science*, 8(4), 363-369.
+
+## 1. Revisar de forma sistemática
+
+| Tipo | Pregunta | Características |
+|---|---|---|
+| **Revisión narrativa** | Panorama de un tema | Selección no explícita; útil para introducir, débil como evidencia |
+| **Revisión sistemática** | Pregunta concreta (por ejemplo, PICO) | Protocolo previo, búsqueda exhaustiva y reproducible, criterios explícitos, evaluación del riesgo de sesgo |
+| **Revisión de alcance** (*scoping*) | ¿Qué se ha investigado y cómo? | Mapea la literatura; no suele evaluar calidad ni combinar efectos |
+| **Metaanálisis** | ¿Cuál es el efecto medio y cuánto varía? | Combina estadísticamente los resultados de los estudios |
+| **Revisión de revisiones** (*umbrella*) | ¿Qué dicen las revisiones existentes? | Sintetiza revisiones |
+
+**PRISMA 2020** (Page et al., 2021) es la guía para **informar** de una revisión sistemática: una lista de comprobación de 27 ítems y un diagrama de flujo que muestra cuántos registros se identifican, criban, excluyen (con motivos) e incluyen. Conviene registrar el protocolo antes de empezar (PROSPERO para salud; OSF para otros campos).
+
+## 2. Combinar resultados: el metaanálisis
+
+Cada estudio aporta un tamaño del efecto (por ejemplo, *d* de Cohen) y su error típico. El **modelo de efectos fijos** supone un único efecto verdadero y pondera cada estudio por el inverso de su varianza. El **modelo de efectos aleatorios** supone que el efecto verdadero varía entre estudios (por población, diseño, contexto) y estima esa variación (τ²).
+
+La **heterogeneidad** se describe con *Q*, τ² e **I²** (la proporción de la variación observada que no se debe al azar; orientativamente, 25 %, 50 % y 75 % se consideran baja, moderada y alta). Una I² alta pide explorar moderadores, no esconderla.
+
+En R, el paquete **metafor** es la referencia: `rma(yi, vi, data = d)` ajusta un modelo de efectos aleatorios y `funnel()` dibuja el embudo.
+
+## 3. Detectar el sesgo de publicación y los errores
+
+Si los estudios con resultados significativos se publican más, el metaanálisis **sobrestima** el efecto. La metaciencia ha desarrollado varias herramientas:
+
+- **Gráfico de embudo**: el efecto de cada estudio frente a su precisión. Sin sesgo, los estudios se reparten de forma simétrica; si faltan estudios pequeños con efectos nulos, aparece **asimetría**.
+- **Prueba de Egger** (Egger et al., 1997): una regresión que contrasta esa asimetría. Variantes como **PET-PEESE** estiman el efecto corregido.
+- **p-curve** (Simonsohn et al., 2014): analiza la distribución de los valores p significativos. Si hay un efecto real, abundan los p muy pequeños (curva sesgada a la derecha); si la curva es plana o se acumula cerca de 0,05, sugiere ausencia de efecto o prácticas cuestionables. **z-curve** extiende la idea para estimar la tasa de replicabilidad esperada.
+- **GRIM** (Brown y Heathers, 2017): comprueba si una media de datos enteros (por ejemplo, de una escala Likert) es matemáticamente posible con el tamaño muestral declarado.
+- **statcheck**: recalcula los valores p a partir de los estadísticos publicados (*t*, *F*, χ²) y detecta incoherencias.
+
+## Laboratorio: un embudo con sesgo de publicación {#lab-c11-embudo}
+
+::: {.laboratorio}
+::: {.laboratorio-etiqueta}
+Laboratorio · se ejecuta en tu navegador
+:::
+
+Se simulan 80 estudios de un efecto verdadero. Decide qué probabilidad tienen de publicarse los estudios **no significativos** y observa el embudo y el efecto estimado con los estudios publicados.
+
+```{ojs}
+//| echo: false
+rango = window.Lab.rango
+viewof efecto_real = rango("Efecto verdadero (d)", [0, 0.8], {step: 0.05, value: 0.2})
+viewof p_pub = rango("Probabilidad de publicar un resultado no significativo", [0, 1], {step: 0.05, value: 0.2})
+```
+
+```{ojs}
+//| echo: false
+{
+  let s = 12345; const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647;
+  const normal = () => Math.sqrt(-2 * Math.log(rnd())) * Math.cos(2 * Math.PI * rnd());
+  const est = [];
+  for (let i = 0; i < 80; i++) {
+    const n = 10 + Math.floor(rnd() * 140), se = Math.sqrt(2 / n + efecto_real ** 2 / (4 * n));
+    const d = efecto_real + normal() * se, sig = Math.abs(d / se) > 1.96;
+    est.push({d, se, pub: sig || rnd() < p_pub});
+  }
+  const pub = est.filter(e => e.pub), w = pub.map(e => 1 / e.se ** 2);
+  const media = pub.reduce((a, e, i) => a + e.d * w[i], 0) / w.reduce((a, b) => a + b, 0);
+  const X = d => 280 + d * 260, Y = se => 20 + se * 520;
+  const pts = est.map(e => `<circle cx="${X(e.d)}" cy="${Y(e.se)}" r="4" fill="${e.pub ? "#2a78d6" : "none"}" stroke="${e.pub ? "#2a78d6" : "#a3a29e"}" stroke-width="1.2"/>`).join("");
+  const emb = `<polyline points="${X(efecto_real - 1.96 * 0.45)},${Y(0.45)} ${X(efecto_real)},${Y(0)} ${X(efecto_real + 1.96 * 0.45)},${Y(0.45)}" fill="none" stroke="currentColor" stroke-dasharray="4 3" opacity=".5"/>`;
+  const d = html`<div role="status"></div>`;
+  d.innerHTML = `<svg viewBox="0 0 560 270" width="100%" style="max-width:560px" role="img" aria-label="Gráfico de embudo: efecto frente a error típico">
+    ${emb}<line x1="${X(efecto_real)}" y1="10" x2="${X(efecto_real)}" y2="260" stroke="currentColor" opacity=".6"/>
+    <line x1="${X(media)}" y1="10" x2="${X(media)}" y2="260" stroke="#eb6834" stroke-width="2"/>${pts}
+    <text x="10" y="18" font-size="11" fill="currentColor">Error típico ↓</text><text x="550" y="265" text-anchor="end" font-size="11" fill="currentColor">Efecto (d) →</text></svg>
+    <p>Publicados: <strong>${pub.length}</strong> de 80 (puntos rellenos). Efecto verdadero: <strong>${efecto_real.toFixed(2).replace(".", ",")}</strong> · estimado con los publicados: <strong style="color:#c4501f">${media.toFixed(2).replace(".", ",")}</strong> (línea naranja).</p>
+    <p class="${media - efecto_real > 0.04 ? "lab-mal" : "lab-bien"}" style="font-weight:600">${media - efecto_real > 0.04 ? `El sesgo de publicación infla el efecto en ${(media - efecto_real).toFixed(2).replace(".", ",")}: faltan los estudios pequeños con resultados nulos y el embudo se vuelve asimétrico.` : (p_pub > 0.8 ? "Con casi todos los estudios publicados, la estimación se acerca al efecto verdadero." : "Con un efecto grande, casi todos los estudios son significativos y el filtro apenas sesga la estimación.")}</p>`;
+  return d;
+}
+```
+:::
+
+## Ejercicios
+
+### Ejercicio 11.1 · Efectos fijos {.unnumbered}
+
+Combina tres estudios con el **inverso de la varianza**: estimación = Σ(wᵢ·dᵢ) / Σwᵢ, con wᵢ = 1 / eeᵢ².
+
+```{webr}
+#| exercise: c11_fijos
+d  <- c(0.45, 0.10, 0.30)
+ee <- c(0.20, 0.08, 0.15)
+w  <- 1 / ee^2
+round(sum(w * d) / ______(w), 3)
+```
+
+::: {.hint exercise="c11_fijos"}
+Divide entre la suma de los pesos: `sum(w)`.
+:::
+
+::: {.solution exercise="c11_fijos"}
+```r
+d  <- c(0.45, 0.10, 0.30)
+ee <- c(0.20, 0.08, 0.15)
+w  <- 1 / ee^2
+round(sum(w * d) / sum(w), 3)
+```
+≈ 0,178: el estudio más preciso (ee = 0,08) pesa más y arrastra la estimación hacia su efecto pequeño.
+:::
+
+```{webr}
+#| exercise: c11_fijos
+#| check: true
+w <- 1 / c(0.2, 0.08, 0.15)^2; esp <- round(sum(w * c(0.45, 0.1, 0.3)) / sum(w), 3)
+if (isTRUE(all.equal(as.numeric(.result), esp))) list(correct = TRUE, message = paste("Correcto:", sub(".", ",", esp, fixed = TRUE))) else list(correct = FALSE, message = "Divide entre sum(w).")
+```
+
+### Ejercicio 11.2 · La prueba GRIM {.unnumbered}
+
+Un artículo informa de una media de **3,47** en una pregunta con respuestas enteras de 1 a 7 y **n = 21**. ¿Es posible? La media de enteros debe ser un múltiplo de 1/n: comprueba si algún total entero produce 3,47 al redondear a dos decimales.
+
+```{webr}
+#| exercise: c11_grim
+n <- 21; media <- 3.47
+totales <- 0:(7 * n)
+any(round(totales / n, 2) == ______)
+```
+
+::: {.hint exercise="c11_grim"}
+Compara con la media publicada: `media`.
+:::
+
+::: {.solution exercise="c11_grim"}
+```r
+n <- 21; media <- 3.47
+totales <- 0:(7 * n)
+any(round(totales / n, 2) == media)
+```
+`FALSE`: 72/21 = 3,43 y 73/21 = 3,48; ningún total da 3,47. La media es **incoherente** con n = 21: puede ser una errata, un tamaño muestral mal informado o un problema más serio. GRIM no prueba mala conducta; indica que hay que pedir los datos.
+:::
+
+```{webr}
+#| exercise: c11_grim
+#| check: true
+if (identical(as.logical(.result), FALSE)) list(correct = TRUE, message = "Correcto: la media no es posible con n = 21.") else list(correct = FALSE, message = "Compara con la variable media.")
+```
+
+## Actividades
+
+::: {.clasificar #ia-c11-tipo titulo="¿Qué tipo de revisión?" categorias="Revisión sistemática con metaanálisis|Revisión de alcance|Revisión narrativa"}
+- Estimar el efecto medio de la tutoría sobre el abandono doctoral a partir de 25 estudios → Revisión sistemática con metaanálisis
+- Mapear qué métodos se han usado para estudiar la revisión por pares → Revisión de alcance
+- Escribir la introducción de un artículo con los trabajos más conocidos → Revisión narrativa
+:::
+
+::: {.clasificar #ia-c11-tecnica titulo="¿Qué técnica detecta cada problema?" categorias="Embudo o Egger|p-curve|GRIM|statcheck"}
+- Faltan estudios pequeños con resultados nulos → Embudo o Egger
+- Los valores p significativos se acumulan justo por debajo de 0,05 → p-curve
+- Una media de una escala de 1 a 5 imposible con el n declarado → GRIM
+- t(28) = 2,10 publicado con p < 0,01 → statcheck // Con esos grados de libertad, p ≈ 0,045.
+:::
+
+## Reto evaluable {#reto-c11}
+
+::: {.callout-important appearance="simple" icon="false"}
+## Reto del capítulo 11 · Una revisión pequeña pero rigurosa
+1. Formula una pregunta acotada de tu campo y redacta un protocolo breve (pregunta, criterios, fuentes, cadena de búsqueda).
+2. Busca y criba tú mismo los resultados, documentando el diagrama de flujo PRISMA.
+3. Si hay al menos cinco estudios con efectos comparables, haz un metaanálisis con metafor, dibuja el embudo y aplica la prueba de Egger. Si no, presenta una síntesis estructurada.
+4. Aplica GRIM o statcheck a los estudios incluidos e informa de lo encontrado con prudencia.
+
+**Entrega:** con la [plantilla de entrega](plantillas/entrega_reto.qmd). Este reto **no tiene solución en el libro**.
+:::
+
+## Autoevaluación
+
+Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la nota.
+
+::: {.webex-check .webex-box}
+1. PRISMA 2020 es una guía para {{< mcq "financiar revisiones" "*informar de revisiones sistemáticas" "evaluar revistas" >}}
+2. El modelo que supone que el efecto verdadero varía entre estudios es el de efectos {{< fitb "aleatorios" ignorecase=true >}}
+3. I² describe la proporción de variación que no se debe al azar. {{< torf true >}}
+4. Si faltan estudios pequeños con efectos nulos, el gráfico de embudo se vuelve {{< fitb "asimétrico" "asimetrico" ignorecase=true >}}
+5. Una p-curve sesgada a la derecha sugiere que hay un efecto real. {{< torf true >}}
+6. Un resultado GRIM incoherente demuestra que hubo fraude. {{< torf false >}}
+7. La herramienta que recalcula los valores p a partir de los estadísticos publicados es {{< mcq "PRISMA" "*statcheck" "VOSviewer" >}}
+8. ¿Qué efecto tiene el sesgo de publicación en un metaanálisis?
+
+{{< longmcq "Ninguno" "*Tiende a sobrestimar el efecto" "Siempre lo subestima" >}}
+:::
+
+::: {.webex-solution boton="Ver explicaciones"}
+- 27 ítems y diagrama de flujo.
+- τ² estima la variación.
+- Baja, moderada, alta: 25, 50, 75 %.
+- Egger lo contrasta.
+- Muchos p muy pequeños.
+- Indica que hay que pedir los datos.
+- *t*, *F*, χ².
+- Faltan los resultados nulos.
+:::

@@ -1,4 +1,4 @@
-# Ciencia de la ciencia y metaciencia
+# Investigación sobre la investigación
 
 Libro abierto e interactivo para doctorandos y personal investigador: cómo se mide la ciencia, la crisis de reproducibilidad, las prácticas cuestionables, la ciencia abierta y la evaluación responsable de la investigación.
 
@@ -9,7 +9,7 @@ Libro abierto e interactivo para doctorandos y personal investigador: cómo se m
 
 ## Cita
 
-Sánchez-Núñez, P. (2026). *Ciencia de la ciencia y metaciencia: investigar sobre la investigación*. Universidad Carlos III de Madrid. Zenodo. <https://doi.org/10.5281/zenodo.24528120>
+Sánchez-Núñez, P. (2026). *Investigación sobre la investigación: ciencia de la ciencia, metaciencia y sus métodos*. Universidad Carlos III de Madrid. Zenodo. <https://doi.org/10.5281/zenodo.24528120>
 
 ## Licencia
 

@@ -119,5 +119,73 @@ def c5_informe():
     guardar(fig, "c5_informe.svg")
 
 
+
+def c7_cobertura():
+    from matplotlib.patches import Ellipse
+    fig, ax = lienzo(8.4, 4.6, (0, 14), (0, 7.6))
+    for (x, y, w, h, c, t, tx, ty) in ((8.3, 3.8, 10.6, 6.8, S[2], "OpenAlex", 12.2, 6.6), (7.2, 3.6, 8.6, 5.6, S[3], "Dimensions", 10.6, 5.9),
+                                       (5.6, 3.6, 5.8, 4.2, S[1], "Scopus", 6.0, 5.2), (5.0, 3.5, 3.8, 2.8, S[0], "Web of Science", 5.0, 3.5)):
+        ax.add_patch(Ellipse((x, y), w, h, fc=c, ec=c, alpha=0.18, lw=1.5))
+        ax.text(tx, ty, t, ha="center", va="center", fontsize=11, fontweight="bold", color=TINTA)
+    ax.text(11.6, 1.5, "Revistas regionales,\notros idiomas,\nlibros, preprints", ha="center", fontsize=9.5, color=TINTA2)
+    ax.text(1.2, 7.0, "Tamaños ilustrativos, no a escala", fontsize=9, color=TINTA2, style="italic")
+    guardar(fig, "c7_cobertura.svg")
+
+
+def c8_asimetria():
+    import random
+    random.seed(7)
+    x = [int(random.paretovariate(1.3) * 3) - 3 for _ in range(1500)]
+    x = [v for v in x if v < 120]
+    fig, ax = plt.subplots(figsize=(8, 3.4))
+    ax.hist(x, bins=60, color=S[0], alpha=0.85, edgecolor="white")
+    s = sorted(x); med = s[len(s) // 2]; media = sum(x) / len(x); p90 = s[int(len(s) * 0.9)]
+    ax.set_xlim(-1, 60)
+    for (v, t, c), fy in zip(((med, f"mediana: {med}", TINTA), (media, f"media: {media:.1f}".replace(".", ","), S[1]), (p90, f"umbral del 10 % más citado: {p90}", S[2])), (0.92, 0.74, 0.56)):
+        ax.axvline(v, color=c, lw=2, ls="--"); ax.text(v + 0.8, ax.get_ylim()[1] * fy, t, color=c, fontsize=10, fontweight="bold")
+    ax.set_xlabel("Citas por trabajo", color=TINTA2); ax.set_ylabel("Número de trabajos", color=TINTA2)
+    for sp in ("top", "right"): ax.spines[sp].set_visible(False)
+    ax.tick_params(colors=TINTA2)
+    guardar(fig, "c8_asimetria.svg")
+
+
+def c9_relaciones():
+    fig, ax = lienzo(9, 4.2, (0, 14), (0, 6.4))
+    def doc(x, y, t, c): caja(ax, x - 0.9, y - 0.45, 1.8, 0.9, t, fc=c, fs=10)
+    ax.text(3.4, 6.0, "Cocitación", ha="center", fontsize=12.5, fontweight="bold", color=TINTA)
+    doc(3.4, 4.6, "Nuevo", "#d6e6f8"); doc(1.8, 1.4, "C", "#f6dccf"); doc(5.0, 1.4, "D", "#f6dccf")
+    flecha(ax, (3.1, 4.1), (2.0, 1.9)); flecha(ax, (3.7, 4.1), (4.8, 1.9))
+    ax.plot([2.7, 4.1], [1.4, 1.4], ls="--", color=S[1], lw=2); ax.text(3.4, 0.55, "C y D, citados juntos", ha="center", fontsize=9.5, color=TINTA2)
+    ax.text(10.6, 6.0, "Acoplamiento bibliográfico", ha="center", fontsize=12.5, fontweight="bold", color=TINTA)
+    doc(9.0, 4.6, "E", "#d6e6f8"); doc(12.2, 4.6, "F", "#d6e6f8"); doc(10.6, 1.4, "Ref.", "#f6dccf")
+    flecha(ax, (9.2, 4.1), (10.3, 1.9)); flecha(ax, (12.0, 4.1), (10.9, 1.9))
+    ax.plot([9.9, 11.3], [4.6, 4.6], ls="--", color=S[0], lw=2); ax.text(10.6, 0.55, "E y F comparten referencias", ha="center", fontsize=9.5, color=TINTA2)
+    guardar(fig, "c9_relaciones.svg")
+
+
+def c10_flujo():
+    fig, ax = lienzo(10, 3.0, (0, 15.4), (0, 4.4))
+    pasos = ["Pregunta", "Corpus", "Preproceso", "Modelo", "Validación"]
+    for i, t in enumerate(pasos):
+        caja(ax, 0.3 + i * 3.05, 2.4, 2.5, 1.1, t, fc="#d6e6f8" if i < 4 else "#d3efe3", fs=11, peso="bold")
+        if i < 4: flecha(ax, (2.85 + i * 3.05, 2.95), (3.3 + i * 3.05, 2.95))
+    ax.add_patch(FancyBboxPatch((0.3, 0.6), 14.7, 0.8, boxstyle="round,pad=0,rounding_size=0.1", fc="#fdf0d3", ec="none"))
+    ax.text(7.65, 1.0, "Lectura humana en cada fase", ha="center", va="center", fontsize=10.5, color=TINTA)
+    ax.add_patch(FancyArrowPatch((13.5, 3.55), (10.6, 3.55), connectionstyle="arc3,rad=0.5", arrowstyle="-|>", mutation_scale=12, color=S[1], lw=1.5))
+    ax.text(12.05, 4.25, "ajustar", ha="center", fontsize=9.5, color=S[1])
+    guardar(fig, "c10_flujo.svg")
+
+
+def c12_capas():
+    fig, ax = lienzo(9, 4.4, (0, 14), (0, 7))
+    capas = [(0.4, "Datos bibliométricos y registros", "¿Qué ha cambiado?", S[0]), (2.5, "Diseños causales", "¿Lo ha causado la reforma?", S[2]), (4.6, "Métodos cualitativos y documentales", "¿Cómo y por qué?", S[3])]
+    for y, t, q, c in capas:
+        ax.add_patch(FancyBboxPatch((1.6, y), 10.8, 1.8, boxstyle="round,pad=0,rounding_size=0.12", fc=c, ec="none", alpha=0.2))
+        ax.text(7.0, y + 1.15, t, ha="center", fontsize=12, fontweight="bold", color=TINTA); ax.text(7.0, y + 0.5, q, ha="center", fontsize=10.5, color=TINTA2)
+    ax.add_patch(FancyArrowPatch((0.9, 0.5), (0.9, 6.3), arrowstyle="<|-|>", mutation_scale=12, color=TINTA2, lw=1.4))
+    ax.text(0.45, 3.4, "Métodos mixtos", rotation=90, ha="center", va="center", fontsize=10, color=TINTA2)
+    guardar(fig, "c12_capas.svg")
+
+
 if __name__ == "__main__":
-    c2_asimetria(); c4_jardin(); c5_informe()
+    c2_asimetria(); c4_jardin(); c5_informe(); c7_cobertura(); c8_asimetria(); c9_relaciones(); c10_flujo(); c12_capas()
