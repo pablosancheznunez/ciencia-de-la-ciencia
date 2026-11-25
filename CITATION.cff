@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: Si usas este libro, cítalo así.
+type: book
+title: Ciencia de la ciencia y metaciencia
+version: 1.0.0
+date-released: '2026-11-25'
+license: CC-BY-4.0
+url: https://pablosancheznunez.com/ciencia-de-la-ciencia/
+repository-code: https://github.com/pablosancheznunez/ciencia-de-la-ciencia
+authors:
+- family-names: Sánchez-Núñez
+  given-names: Pablo
+  orcid: https://orcid.org/0000-0001-7845-9506
+  affiliation: Universidad Carlos III de Madrid
+keywords:
+- ciencia de la ciencia
+- metaciencia
+- research on research
+- bibliometría
+- reproducibilidad
+- ciencia abierta
+- evaluación de la investigación

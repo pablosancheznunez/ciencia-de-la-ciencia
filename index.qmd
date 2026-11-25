@@ -1,0 +1,33 @@
+---
+engine: markdown
+---
+
+# Presentación {.unnumbered}
+
+La ciencia es la forma más fiable que hemos inventado para conocer el mundo, y también es una actividad humana: tiene incentivos, sesgos, modas y fallos. La **ciencia de la ciencia** (*science of science*) estudia con métodos científicos cómo se produce, se comunica y se evalúa el conocimiento. La **investigación sobre la investigación** (*research on research*, RoR) y la **metaciencia** ponen el foco en mejorarla: detectar qué falla y comprobar si las reformas funcionan.
+
+Este libro está pensado para doctorandos y personal investigador de cualquier disciplina. Al terminarlo sabrás leer críticamente un indicador bibliométrico, estimar cuánto puedes fiarte de un resultado publicado, reconocer las prácticas cuestionables (incluidas las tuyas) y elegir las prácticas abiertas que hacen tu trabajo más creíble.
+
+::: {.callout-note appearance="simple" icon="false"}
+## Cómo citar este libro
+> Sánchez-Núñez, P. (2026). *Ciencia de la ciencia y metaciencia: investigar sobre la investigación*. Universidad Carlos III de Madrid. Zenodo.
+
+**Autor:** Pablo Sánchez-Núñez ([ORCID 0000-0001-7845-9506](https://orcid.org/0000-0001-7845-9506)), Universidad Carlos III de Madrid. Texto bajo licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es).
+:::
+
+## Mapa del libro
+
+| Capítulo | Pregunta |
+|---|---|
+| [1. Qué es la ciencia de la ciencia](01-que-es.qmd) | ¿Cómo se estudia científicamente la propia ciencia? |
+| [2. Medir la ciencia](02-medir.qmd) | ¿Qué miden (y qué no) las citas y los indicadores? |
+| [3. La crisis de reproducibilidad](03-reproducibilidad.qmd) | ¿Cuánto podemos fiarnos de un resultado publicado? |
+| [4. Prácticas cuestionables y sesgos](04-practicas.qmd) | ¿Cómo se fabrican falsos positivos sin hacer trampa a propósito? |
+| [5. Ciencia abierta y reformas](05-reformas.qmd) | ¿Qué cambios mejoran la credibilidad y qué pruebas hay? |
+| [6. Evaluar la investigación](06-evaluacion.qmd) | ¿Cómo evaluar de forma responsable personas, proyectos e instituciones? |
+
+## Cómo está organizado cada capítulo
+
+Cada capítulo empieza con sus **objetivos**, el **glosario** del capítulo y una **lectura obligatoria** con DOI. Después vienen el contenido, **laboratorios** interactivos, **actividades** de corrección inmediata, un **reto evaluable** sin solución en el libro y una **autoevaluación**. Los ejercicios de R se ejecutan en tu navegador: si nunca has usado R, empieza por [Usar R en este libro](00-r-en-el-libro.qmd).
+
+Tu progreso se guarda solo en tu navegador. El libro funciona sin conexión una vez visitado, salvo los laboratorios que consultan datos en vivo.

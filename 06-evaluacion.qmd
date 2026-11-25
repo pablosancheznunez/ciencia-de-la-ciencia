@@ -1,0 +1,172 @@
+---
+engine: markdown
+---
+
+# Capítulo 6. Evaluar la investigación {#sec-cap6}
+
+::: {.callout-note appearance="default"}
+## Objetivos
+- Comprender cómo los sistemas de evaluación moldean lo que se investiga y cómo se publica.
+- Conocer las iniciativas de reforma: DORA, el Manifiesto de Leiden, los Principios de Hong Kong y CoARA.
+- Preparar y valorar evidencias de una trayectoria investigadora más allá de las métricas.
+:::
+
+::: {.callout-note appearance="simple" icon="false"}
+## Glosario del capítulo
+[Evaluación responsable](92-glosario.qmd#gl-responsable) · [CoARA](92-glosario.qmd#gl-coara) · [DORA](92-glosario.qmd#gl-dora) · [Principios de Hong Kong](92-glosario.qmd#gl-hongkong) · [CV narrativo](92-glosario.qmd#gl-cvnarrativo) · [Revisión por pares](92-glosario.qmd#gl-pares) · [CRediT](92-glosario.qmd#gl-credit)
+:::
+
+::: {.callout-tip appearance="simple" icon="false"}
+## Descargas
+[Plantilla de entrega del reto (.qmd)](plantillas/entrega_reto.qmd){.btn .btn-outline-primary .btn-sm download="entrega_reto.qmd"}
+[Tema de estilo (.scss)](plantillas/informe.scss){.btn .btn-outline-primary .btn-sm download="informe.scss"}
+:::
+
+## Lectura obligatoria
+
+::: {.lectura}
+Moher, D.; Bouter, L.; Kleinert, S.; Glasziou, P.; Sham, M. H.; Barbour, V. et al. (2020). [The Hong Kong Principles for assessing researchers: Fostering research integrity](https://doi.org/10.1371/journal.pbio.3000737). *PLOS Biology*, 18(7), e3000737.
+:::
+
+### Lecturas complementarias {.unnumbered}
+
+- Hicks, D. et al. (2015). [Bibliometrics: The Leiden Manifesto for research metrics](https://doi.org/10.1038/520429a). *Nature*, 520, 429-431.
+- [Compromisos del Acuerdo para la reforma de la evaluación de la investigación (CoARA)](https://coara.org/agreement/the-commitments/), 2022.
+- Smaldino, P. E.; McElreath, R. (2016). [The natural selection of bad science](https://doi.org/10.1098/rsos.160384). *Royal Society Open Science*, 3(9), 160384.
+
+## 1. Lo que se evalúa es lo que se hace
+
+La evaluación decide quién obtiene una plaza, un proyecto, una promoción o una acreditación. Por eso no solo **mide** la investigación: la **moldea**. Si la evaluación cuenta artículos en revistas de alto factor de impacto, el personal investigador tiende a trocear resultados, a perseguir temas de moda, a evitar los riesgos y a no dedicar tiempo a la docencia, los datos, el software, la revisión por pares o la transferencia. El capítulo 4 mostró que esos incentivos pueden seleccionar, sin mala intención, los métodos menos fiables.
+
+## 2. El movimiento por una evaluación responsable
+
+| Iniciativa | Año | Idea central |
+|---|---|---|
+| **DORA** | 2012 | No usar métricas de revista (como el factor de impacto) para evaluar artículos ni personas; valorar todos los resultados de la investigación |
+| **Manifiesto de Leiden** | 2015 | Diez principios para usar indicadores como apoyo, no como sustituto, del juicio experto |
+| **Principios de Hong Kong** | 2020 | Evaluar a las personas por prácticas que favorecen la integridad |
+| **CoARA** | 2022 | Compromiso de instituciones europeas para reformar su evaluación, con plazos |
+
+Los **Principios de Hong Kong** (Moher et al., 2020) proponen valorar:
+
+1. Las prácticas responsables en todo el ciclo de la investigación.
+2. La comunicación completa y transparente, sea cual sea el resultado.
+3. Las prácticas de ciencia abierta.
+4. Una amplia gama de investigación, incluidas las replicaciones y las síntesis.
+5. Otras contribuciones: revisión por pares, mentoría, divulgación, intercambio de conocimiento.
+
+El **Acuerdo de CoARA** compromete a sus firmantes, entre otras cosas, a reconocer la diversidad de contribuciones y carreras, a basar la evaluación sobre todo en la revisión cualitativa con un uso responsable de los indicadores, a abandonar los usos inadecuados de las métricas de revista y del índice h, y a evitar los rankings de universidades en la evaluación de la investigación.
+
+## 3. Herramientas para evaluar de otro modo
+
+- **CV narrativos**: formatos con apartados en los que la persona explica sus contribuciones al conocimiento, a otras personas, a la comunidad y a la sociedad, con evidencias seleccionadas en lugar de listas exhaustivas.
+- **Taxonomía CRediT**: 14 roles (conceptualización, curación de datos, análisis formal, software, supervisión…) para declarar quién hizo qué en un trabajo colectivo.
+- **Evidencias diversas**: conjuntos de datos y software con DOI, protocolos, informes de revisión, materiales docentes abiertos, impacto en políticas.
+- **Revisión por pares bien diseñada**: criterios explícitos, paneles diversos, formación de los evaluadores y, en algunos casos, sorteos parciales entre las propuestas que superan un umbral de calidad, que algunas agencias ya ensayan.
+
+::: {.callout-note appearance="simple"}
+## La revisión por pares también se estudia
+Sus problemas están documentados: baja concordancia entre revisores, sesgos, lentitud y dificultad para detectar errores. Experimentos como los de revisión abierta, doble anónima o con formación específica forman parte de la investigación sobre la investigación (capítulo 1).
+:::
+
+## 4. Evaluar no es solo medir: un caso
+
+::: {.escenario #ia-c6-comision titulo="Formas parte de una comisión de selección"}
+Una universidad firmante de CoARA convoca una plaza. Hay dos candidaturas finales.
+
+### Primera reunión {#c6e-inicio}
+Un miembro propone ordenar las candidaturas por la suma de factores de impacto de sus publicaciones. ¿Qué respondes?
+
+- [Me parece objetivo y rápido: lo apoyo](#c6e-fi)
+- [Propongo valorar los criterios de la convocatoria con las evidencias aportadas](#c6e-criterios)
+
+### Métrica de revista {#c6e-fi .final .mal}
+El factor de impacto describe revistas, no personas ni artículos, y la propia institución se ha comprometido a no usarlo así (DORA y CoARA).
+
+### Criterios y evidencias {#c6e-criterios}
+La candidata A tiene más artículos; la candidata B tiene menos, pero ha publicado un software muy usado, un conjunto de datos con DOI y un informe registrado con resultado nulo. ¿Cómo procedes?
+
+- [Leo las contribuciones seleccionadas de cada una y las valoro según el perfil de la plaza](#c6e-bien)
+- [Descarto el software y los datos porque no son publicaciones](#c6e-descarta)
+
+### Contribuciones invisibles {#c6e-descarta .final .mal}
+Ignorar el software, los datos o los resultados nulos castiga justo las prácticas que hacen la ciencia más fiable.
+
+### Juicio experto informado {#c6e-bien .final .bien}
+Has evaluado contribuciones, no contenedores. Los indicadores pueden informar, pero la decisión se basa en la lectura y en el perfil de la plaza.
+:::
+
+## Actividades
+
+::: {.clasificar #ia-c6-hk titulo="¿Qué Principio de Hong Kong valora esta evidencia?" categorias="Prácticas responsables|Comunicación completa|Ciencia abierta|Investigación diversa|Otras contribuciones"}
+- Un protocolo con plan de gestión de datos y aprobación ética → Prácticas responsables
+- Publicar un resultado nulo con todos los análisis → Comunicación completa
+- Depositar datos y código en Zenodo con DOI → Ciencia abierta
+- Una replicación independiente de un estudio influyente → Investigación diversa
+- Dirigir tesis y revisar artículos para revistas → Otras contribuciones
+:::
+
+::: {.clasificar #ia-c6-credit titulo="¿Qué rol CRediT es?" categorias="Conceptualización|Curación de datos|Análisis formal|Software|Supervisión|Redacción: revisión y edición"}
+- Formuló la pregunta y los objetivos del estudio → Conceptualización
+- Limpió, documentó y mantuvo los datos → Curación de datos
+- Aplicó los modelos estadísticos → Análisis formal
+- Programó el paquete que hace los cálculos → Software
+- Dirigió el trabajo del equipo → Supervisión
+- Revisó críticamente el manuscrito → Redacción: revisión y edición
+:::
+
+::: {.clasificar #ia-c6-uso titulo="¿Compatible con CoARA?" categorias="Compatible|Incompatible"}
+- Valorar la mentoría y la docencia en la carrera investigadora → Compatible
+- Exigir un índice h mínimo para concurrir a una plaza → Incompatible
+- Usar la posición de la universidad en un ranking internacional para repartir fondos internos → Incompatible
+- Pedir un CV narrativo con cinco contribuciones seleccionadas y explicadas → Compatible
+:::
+
+## Reto evaluable {#reto-c6}
+
+::: {.callout-important appearance="simple" icon="false"}
+## Reto del capítulo 6 · Tu trayectoria en formato narrativo
+1. Redacta un **CV narrativo** de dos páginas con cuatro apartados: contribuciones al conocimiento, a la formación de otras personas, a la comunidad investigadora y a la sociedad.
+2. Selecciona **cinco contribuciones** (no solo artículos) y explica para cada una qué aportó y tu papel con roles **CRediT**.
+3. Analiza la convocatoria de evaluación más relevante para ti (una ayuda, una acreditación, una plaza): ¿qué criterios aplica? ¿Son coherentes con DORA y CoARA?
+4. Propón **tres cambios** concretos a esa convocatoria y justifícalos con la literatura del libro.
+
+**Entrega:** con la [plantilla de entrega](plantillas/entrega_reto.qmd). Este reto **no tiene solución en el libro**.
+:::
+
+## Autoevaluación
+
+Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la nota.
+
+::: {.webex-check .webex-box}
+1. La evaluación de la investigación solo mide; no influye en cómo se investiga. {{< torf false >}}
+2. La iniciativa europea de 2022 que compromete a las instituciones a reformar su evaluación se llama {{< fitb "CoARA" ignorecase=true >}}
+3. Los Principios de Hong Kong se centran en evaluar a las personas investigadoras para fomentar la {{< mcq "productividad" "*integridad" "internacionalización" >}}
+4. La taxonomía que describe quién hizo qué en un trabajo se llama {{< mcq "ORCID" "*CRediT" "DORA" >}}
+5. Según CoARA, deben evitarse los rankings de universidades en la evaluación de la investigación. {{< torf true >}}
+6. Un CV narrativo sustituye la lista exhaustiva de publicaciones por contribuciones seleccionadas y explicadas. {{< torf true >}}
+7. Un sorteo parcial entre propuestas que superan un umbral de calidad es {{< mcq "una práctica prohibida" "*una técnica que algunas agencias ensayan para repartir fondos" "lo mismo que evaluar por métricas" >}}
+8. ¿Por qué valorar los resultados nulos y las replicaciones?
+
+{{< longmcq "Porque son más fáciles de publicar" "*Porque son necesarios para una ciencia fiable y la evaluación tradicional los desincentiva" "Porque tienen más citas" >}}
+:::
+
+::: {.webex-solution boton="Ver explicaciones"}
+- Lo que se evalúa es lo que se hace.
+- *Coalition for Advancing Research Assessment*.
+- *Fostering research integrity*.
+- *Contributor Roles Taxonomy*.
+- Es uno de sus compromisos.
+- Es su rasgo central.
+- Varias agencias han probado sorteos parciales.
+- Corrigen el sesgo de publicación.
+:::
+
+## Recursos complementarios
+
+| Recurso | Para qué sirve |
+|---|---|
+| [CoARA](https://coara.org/) | Coalición europea para la reforma de la evaluación |
+| [DORA](https://sfdora.org/) | Declaración y herramientas para evaluar sin factor de impacto |
+| [CRediT](https://credit.niso.org/) | Los 14 roles de contribución |
+| [Résumé for Research and Innovation (UKRI)](https://www.ukri.org/apply-for-funding/develop-your-application/resume-for-research-and-innovation-r4ri-guidance/) | Un modelo de CV narrativo |

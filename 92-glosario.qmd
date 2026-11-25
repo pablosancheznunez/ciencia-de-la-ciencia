@@ -1,0 +1,133 @@
+---
+engine: markdown
+---
+
+# Glosario {#sec-glosario}
+
+Términos del libro ordenados por capítulo. Cada entrada enlaza con el capítulo donde se explica.
+
+## Qué es la ciencia de la ciencia
+
+### Ciencia de la ciencia {#gl-scisci}
+*Science of science*. Estudio científico de cómo se produce, comunica y evalúa el conocimiento, con datos sobre publicaciones, citas, colaboraciones y financiación. → [Capítulo 1](01-que-es.qmd)
+
+### Metaciencia {#gl-metaciencia}
+Investigación sobre la fiabilidad de los métodos y resultados científicos y sobre las reformas que la mejoran. También, metainvestigación. → [Capítulo 1](01-que-es.qmd)
+
+### Investigación sobre la investigación {#gl-ror}
+*Research on research* (RoR). Estudio de qué hace que la investigación sea mejor y más útil, con atención especial a la financiación y la política científica. → [Capítulo 1](01-que-es.qmd)
+
+### Cienciometría {#gl-cienciometria}
+Estudio cuantitativo de la ciencia, sobre todo a partir de publicaciones y citas. → [Capítulo 1](01-que-es.qmd)
+
+### Efecto Mateo {#gl-mateo}
+Acumulación de reconocimiento en quienes ya lo tienen, descrita por Merton (1968). → [Capítulo 1](01-que-es.qmd)
+
+### Ley de Price {#gl-price}
+Observación de que una pequeña parte de los autores produce una gran parte de las publicaciones de un campo. → [Capítulo 1](01-que-es.qmd)
+
+## Medir la ciencia
+
+### Cita {#gl-cita}
+Referencia de un documento a otro. Mide uso o visibilidad, no calidad. → [Capítulo 2](02-medir.qmd)
+
+### Índice h {#gl-indiceh}
+Mayor número *h* tal que *h* trabajos tienen al menos *h* citas cada uno (Hirsch, 2005). → [Capítulo 2](02-medir.qmd)
+
+### Factor de impacto {#gl-fi}
+Media de citas recibidas en un año por los artículos que una revista publicó en los dos años anteriores. Es un indicador de revista. → [Capítulo 2](02-medir.qmd)
+
+### Normalización por campo {#gl-normalizacion}
+Comparación de las citas de un trabajo con la media de los trabajos del mismo campo, año y tipo. → [Capítulo 2](02-medir.qmd)
+
+### Distribución asimétrica {#gl-asimetrica}
+Distribución en la que pocos casos acumulan valores muy altos; la media no representa lo típico. → [Capítulo 2](02-medir.qmd)
+
+### Altmetría {#gl-altmetria}
+Indicadores basados en menciones en redes sociales, noticias, documentos de políticas o gestores de referencias. → [Capítulo 2](02-medir.qmd)
+
+### Manifiesto de Leiden {#gl-leiden}
+Diez principios para el uso responsable de los indicadores en la evaluación (Hicks et al., 2015). → [Capítulo 2](02-medir.qmd)
+
+## Reproducibilidad
+
+### Reproducibilidad {#gl-reproducibilidad}
+Obtener los mismos resultados con los mismos datos y el mismo código. → [Capítulo 3](03-reproducibilidad.qmd)
+
+### Replicabilidad {#gl-replicabilidad}
+Obtener resultados coherentes con datos nuevos recogidos con el mismo método. → [Capítulo 3](03-reproducibilidad.qmd)
+
+### Potencia estadística {#gl-potencia}
+Probabilidad de que un estudio detecte un efecto si existe. → [Capítulo 3](03-reproducibilidad.qmd)
+
+### Valor predictivo positivo {#gl-vpp}
+Probabilidad de que un resultado significativo corresponda a un efecto real. → [Capítulo 3](03-reproducibilidad.qmd)
+
+### Falso positivo {#gl-falsopositivo}
+Resultado significativo cuando no existe un efecto real (error de tipo I). → [Capítulo 3](03-reproducibilidad.qmd)
+
+### Maldición del ganador {#gl-ganador}
+Tendencia de los estudios pequeños que resultan significativos a sobrestimar el tamaño del efecto. → [Capítulo 3](03-reproducibilidad.qmd)
+
+## Prácticas cuestionables
+
+### Prácticas cuestionables {#gl-qrp}
+Decisiones que no son fraude pero aumentan la probabilidad de resultados falsos, como informar solo de lo significativo. → [Capítulo 4](04-practicas.qmd)
+
+### *p-hacking* {#gl-phacking}
+Probar análisis o decisiones hasta obtener un resultado significativo. → [Capítulo 4](04-practicas.qmd)
+
+### HARKing {#gl-harking}
+*Hypothesizing after the results are known*: presentar como hipótesis previa lo descubierto tras ver los datos. → [Capítulo 4](04-practicas.qmd)
+
+### Grados de libertad del investigador {#gl-grados}
+Decisiones que se pueden tomar al recoger y analizar los datos y que cambian el resultado. → [Capítulo 4](04-practicas.qmd)
+
+### Sesgo de publicación {#gl-sesgopub}
+Dependencia de la publicación respecto del resultado: se publican más los resultados positivos. → [Capítulo 4](04-practicas.qmd)
+
+### Parada opcional {#gl-parada}
+Decidir cuándo dejar de recoger datos según el resultado provisional. → [Capítulo 4](04-practicas.qmd)
+
+## Reformas
+
+### Ciencia abierta {#gl-cienciaabierta}
+Conjunto de prácticas que hacen accesibles y transparentes las publicaciones, los datos, el código, los métodos y la evaluación. → [Capítulo 5](05-reformas.qmd)
+
+### Preregistro {#gl-preregistro}
+Plan del estudio registrado con fecha antes de analizar los datos. → [Capítulo 5](05-reformas.qmd)
+
+### Informe registrado {#gl-informe}
+Formato de publicación en el que la revista acepta el estudio antes de conocer los resultados. → [Capítulo 5](05-reformas.qmd)
+
+### Datos FAIR {#gl-fair}
+Datos localizables, accesibles, interoperables y reutilizables. → [Capítulo 5](05-reformas.qmd)
+
+### Insignias de prácticas abiertas {#gl-insignias}
+Distintivos que algunas revistas conceden a los artículos que comparten datos, materiales o preregistros. → [Capítulo 5](05-reformas.qmd)
+
+### Preprint {#gl-preprint}
+Versión de un trabajo difundida antes de la revisión por pares. → [Capítulo 5](05-reformas.qmd)
+
+## Evaluación
+
+### Evaluación responsable {#gl-responsable}
+Evaluación basada en el juicio experto, apoyada por indicadores bien usados y coherente con la misión de lo evaluado. → [Capítulo 6](06-evaluacion.qmd)
+
+### CoARA {#gl-coara}
+Coalición para el avance de la evaluación de la investigación, creada en 2022 en torno a un acuerdo europeo con diez compromisos. → [Capítulo 6](06-evaluacion.qmd)
+
+### DORA {#gl-dora}
+Declaración de San Francisco sobre la evaluación de la investigación (2012). → [Capítulo 6](06-evaluacion.qmd)
+
+### Principios de Hong Kong {#gl-hongkong}
+Cinco principios para evaluar a las personas investigadoras fomentando la integridad (Moher et al., 2020). → [Capítulo 6](06-evaluacion.qmd)
+
+### CV narrativo {#gl-cvnarrativo}
+Currículo que presenta contribuciones seleccionadas y explicadas en lugar de listas exhaustivas. → [Capítulo 6](06-evaluacion.qmd)
+
+### Revisión por pares {#gl-pares}
+Evaluación de un trabajo o una propuesta por especialistas del área. → [Capítulo 6](06-evaluacion.qmd)
+
+### CRediT {#gl-credit}
+Taxonomía de 14 roles para declarar la contribución de cada persona a un trabajo. → [Capítulo 6](06-evaluacion.qmd)

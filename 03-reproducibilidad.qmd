@@ -1,0 +1,263 @@
+---
+engine: markdown
+---
+
+# Capítulo 3. La crisis de reproducibilidad {#sec-cap3}
+
+::: {.callout-note appearance="default"}
+## Objetivos
+- Distinguir reproducibilidad, replicabilidad y robustez.
+- Conocer los grandes proyectos de replicación y sus resultados.
+- Calcular cuánto podemos fiarnos de un resultado significativo según la potencia, el umbral y la probabilidad previa.
+:::
+
+::: {.callout-note appearance="simple" icon="false"}
+## Glosario del capítulo
+[Reproducibilidad](92-glosario.qmd#gl-reproducibilidad) · [Replicabilidad](92-glosario.qmd#gl-replicabilidad) · [Potencia estadística](92-glosario.qmd#gl-potencia) · [Valor predictivo positivo](92-glosario.qmd#gl-vpp) · [Falso positivo](92-glosario.qmd#gl-falsopositivo) · [Maldición del ganador](92-glosario.qmd#gl-ganador)
+:::
+
+::: {.callout-tip appearance="simple" icon="false"}
+## Descargas
+[Script R del capítulo](plantillas/03_reproducibilidad.R){.btn .btn-outline-primary .btn-sm download="03_reproducibilidad.R"}
+[Plantilla de entrega del reto (.qmd)](plantillas/entrega_reto.qmd){.btn .btn-outline-primary .btn-sm download="entrega_reto.qmd"}
+[Tema de estilo (.scss)](plantillas/informe.scss){.btn .btn-outline-primary .btn-sm download="informe.scss"}
+:::
+
+## Lectura obligatoria
+
+::: {.lectura}
+Open Science Collaboration (2015). [Estimating the reproducibility of psychological science](https://doi.org/10.1126/science.aac4716). *Science*, 349(6251), aac4716.
+:::
+
+### Lecturas complementarias {.unnumbered}
+
+- Ioannidis, J. P. A. (2005). [Why most published research findings are false](https://doi.org/10.1371/journal.pmed.0020124). *PLoS Medicine*, 2(8), e124.
+- Button, K. S.; Ioannidis, J. P. A.; Mokrysz, C.; Nosek, B. A.; Flint, J.; Robinson, E. S. J.; Munafò, M. R. (2013). [Power failure: Why small sample size undermines the reliability of neuroscience](https://doi.org/10.1038/nrn3475). *Nature Reviews Neuroscience*, 14(5), 365-376.
+
+## 1. Tres palabras que no son sinónimos
+
+| Término | Pregunta | Se comprueba… |
+|---|---|---|
+| **Reproducibilidad** (computacional) | ¿Obtengo los mismos resultados con **los mismos datos y el mismo código**? | Volviendo a ejecutar el análisis |
+| **Replicabilidad** | ¿Obtengo un resultado coherente con **datos nuevos** recogidos con el mismo método? | Repitiendo el estudio |
+| **Robustez** | ¿Se mantiene el resultado con **otros análisis razonables** de los mismos datos? | Variando decisiones analíticas |
+
+La terminología varía entre disciplinas (en algunas, «reproducibilidad» significa lo que aquí llamamos replicabilidad), así que conviene definirla siempre al escribir.
+
+## 2. Qué han encontrado los proyectos de replicación
+
+En 2015, la Open Science Collaboration repitió **100 estudios** publicados en tres revistas de psicología, con muestras más grandes y en contacto con los autores originales. El 97 % de los originales tenían resultados significativos; en las replicaciones, solo alrededor del **36 %**. Los tamaños del efecto de las replicaciones eran, de media, aproximadamente **la mitad** de los originales.
+
+Proyectos posteriores, con métodos distintos, han encontrado tasas de replicación diversas en economía experimental, ciencias sociales publicadas en *Nature* y *Science*, o biología del cáncer preclínica. Las cifras no son comparables entre sí, y «replicar» puede definirse de varias formas (significación, tamaño del efecto, intervalo), pero el mensaje común es claro: **un resultado publicado y significativo no es, por sí solo, una prueba sólida**.
+
+::: {.callout-note appearance="simple"}
+## Una replicación fallida no es un fraude
+Un resultado puede no replicarse por azar en cualquiera de los dos estudios, por diferencias de población o de contexto, por errores, o porque el efecto original era un falso positivo o estaba inflado. Una sola replicación tampoco es concluyente: lo que importa es la evidencia acumulada.
+:::
+
+## 3. Por qué tantos resultados no se replican
+
+Ioannidis (2005) mostró con un modelo sencillo que la probabilidad de que un resultado significativo sea verdadero, el **valor predictivo positivo** (VPP), depende de tres cosas:
+
+- La **probabilidad previa** de que la hipótesis sea cierta (expresada como razón *R* entre hipótesis verdaderas y falsas que se ponen a prueba).
+- La **potencia** del estudio (1 − β): la probabilidad de detectar el efecto si existe.
+- El **umbral de significación** α (normalmente 0,05).
+
+::: {style="text-align:center;font-size:1.15em"}
+VPP = (1 − β) · R / [ (1 − β) · R + α ]
+:::
+
+Con hipótesis arriesgadas (R bajo) y estudios con poca potencia, la mayoría de los «hallazgos» significativos pueden ser falsos aunque nadie haga trampas. Si además hay **sesgo** (prácticas que convierten resultados nulos en significativos, capítulo 4), el VPP baja todavía más.
+
+Button et al. (2013) estimaron que la potencia mediana de los estudios de neurociencia rondaba el **21 %**. La poca potencia tiene un segundo efecto, la **maldición del ganador**: cuando un estudio pequeño sale significativo, lo hace casi siempre porque sobrestimó el efecto; por eso las replicaciones encuentran efectos más pequeños.
+
+## 4. Laboratorio: ¿cuánto te fías de un resultado significativo? {#lab-c3-vpp}
+
+::: {.laboratorio}
+::: {.laboratorio-etiqueta}
+Laboratorio · cálculo en tu navegador
+:::
+
+Imagina 1000 hipótesis puestas a prueba en un campo. Ajusta la proporción de hipótesis verdaderas, la potencia, el umbral y el sesgo, y mira cuántos resultados significativos son verdaderos.
+
+```{ojs}
+//| echo: false
+rango = window.Lab.rango
+viewof p_prev = rango("Hipótesis verdaderas (de cada 100 que se prueban)", [1, 50], {step: 1, value: 10})
+viewof potencia = rango("Potencia (%)", [5, 99], {step: 1, value: 35})
+viewof alfa = rango("Umbral α", [0.001, 0.1], {step: 0.001, value: 0.05, formato: x => x.toFixed(3).replace(".", ",")})
+viewof sesgo = rango("Sesgo u (proporción de nulos convertidos en positivos)", [0, 0.5], {step: 0.05, value: 0, formato: x => x.toFixed(2).replace(".", ",")})
+```
+
+```{ojs}
+//| echo: false
+{
+  const N = 1000, verd = N * p_prev / 100, fals = N - verd, pw = potencia / 100;
+  const vp = verd * (pw + sesgo * (1 - pw)), fp = fals * (alfa + sesgo * (1 - alfa));
+  const vpp = vp / (vp + fp);
+  const fmt = x => Math.round(x).toLocaleString("es-ES");
+  const W = 520, esc = (W - 20) / N;
+  const d = html`<div role="status"></div>`;
+  d.innerHTML = `<p>De ${fmt(N)} hipótesis, ${fmt(verd)} son verdaderas. Salen significativas <strong>${fmt(vp)}</strong> verdaderas y <strong>${fmt(fp)}</strong> falsas.</p>
+   <p style="font-size:1.2rem">Valor predictivo positivo: <strong>${(100 * vpp).toFixed(0)} %</strong> <span class="${vpp >= .8 ? "lab-bien" : vpp >= .5 ? "lab-medio" : "lab-mal"}" style="font-weight:600">${vpp >= .8 ? "· bastante fiable" : vpp >= .5 ? "· dudoso" : "· es más probable que sea falso"}</span></p>
+   <svg viewBox="0 0 ${W} 46" width="100%" style="max-width:${W}px" role="img" aria-label="Resultados significativos: ${fmt(vp)} verdaderos y ${fmt(fp)} falsos">
+   <rect x="10" y="8" width="${(W - 20) * vp / Math.max(vp + fp, 1)}" height="24" fill="#1baf7a"/>
+   <rect x="${10 + (W - 20) * vp / Math.max(vp + fp, 1)}" y="8" width="${(W - 20) * fp / Math.max(vp + fp, 1)}" height="24" fill="#eb6834"/>
+   <text x="10" y="44" font-size="11" fill="currentColor">verdaderos</text><text x="${W - 10}" y="44" font-size="11" text-anchor="end" fill="currentColor">falsos</text></svg>
+   <p class="small">Modelo de Ioannidis (2005). Prueba: 10 de cada 100 hipótesis verdaderas, potencia 20 % y un poco de sesgo (0,1). Después sube la potencia al 80 % y baja α a 0,005.</p>`;
+  return d;
+}
+```
+:::
+
+## 5. Calcular con R
+
+```{webr}
+#| autorun: true
+vpp <- function(R, potencia, alfa = 0.05) (potencia * R) / (potencia * R + alfa)
+vpp(R = 0.1 / 0.9, potencia = 0.8)   # 10 % de hipótesis verdaderas, potencia alta
+vpp(R = 0.1 / 0.9, potencia = 0.2)   # la misma probabilidad previa, potencia baja
+```
+
+### Ejercicio 3.1 {.unnumbered}
+
+En un campo exploratorio, solo 1 de cada 20 hipótesis probadas es verdadera (R = 1/19). Con potencia del 80 % y α = 0,05, ¿cuál es el VPP?
+
+```{webr}
+#| exercise: c3_vpp
+#| setup: true
+vpp <- function(R, potencia, alfa = 0.05) (potencia * R) / (potencia * R + alfa)
+```
+
+```{webr}
+#| exercise: c3_vpp
+vpp(R = 1 / 19, potencia = ______)
+```
+
+::: {.hint exercise="c3_vpp"}
+La potencia del 80 % se escribe 0.8.
+:::
+
+::: {.solution exercise="c3_vpp"}
+```r
+vpp(R = 1 / 19, potencia = 0.8)
+```
+0,46: incluso con buena potencia, menos de la mitad de los resultados significativos serían verdaderos. En campos exploratorios, un único resultado significativo es una pista, no una conclusión.
+:::
+
+```{webr}
+#| exercise: c3_vpp
+#| check: true
+if (isTRUE(all.equal(as.numeric(.result), (0.8 / 19) / (0.8 / 19 + 0.05), tolerance = 1e-6))) list(correct = TRUE, message = "Correcto: VPP ≈ 0,46.") else
+  list(correct = FALSE, message = "Escribe la potencia como proporción: 0.8.")
+```
+
+### Ejercicio 3.2: la maldición del ganador {.unnumbered}
+
+Simulamos 2000 estudios pequeños (20 personas por grupo) de un efecto real pequeño (d = 0,2) y nos quedamos con los significativos. Completa el código para calcular el **tamaño del efecto medio** de los estudios significativos.
+
+```{webr}
+#| exercise: c3_ganador
+#| setup: true
+set.seed(42)
+n <- 20; d_real <- 0.2
+estudios <- replicate(2000, {
+  a <- rnorm(n, 0, 1); b <- rnorm(n, d_real, 1)
+  c(d = (mean(b) - mean(a)) / sqrt((var(a) + var(b)) / 2), p = t.test(b, a)$p.value)
+})
+estudios <- as.data.frame(t(estudios))
+```
+
+```{webr}
+#| exercise: c3_ganador
+significativos <- estudios[estudios$p < 0.05, ]
+nrow(significativos) / nrow(estudios)    # potencia observada
+mean(significativos$______)              # efecto medio publicado
+```
+
+::: {.hint exercise="c3_ganador"}
+La columna con el tamaño del efecto se llama `d`.
+:::
+
+::: {.solution exercise="c3_ganador"}
+```r
+significativos <- estudios[estudios$p < 0.05, ]
+nrow(significativos) / nrow(estudios)
+mean(significativos$d)
+```
+Solo alrededor de uno de cada diez estudios sale significativo, y el efecto medio de esos estudios es varias veces mayor que el real (0,2): si solo se publican los significativos, la literatura exagera el efecto.
+:::
+
+```{webr}
+#| exercise: c3_ganador
+#| check: true
+if (is.numeric(.result) && length(.result) == 1 && .result > 0.5) list(correct = TRUE, message = paste0("Correcto: efecto medio publicado ≈ ", format(round(.result, 2), decimal.mark = ","), ", frente a 0,2 real.")) else
+  list(correct = FALSE, message = "Calcula la media de la columna d de los significativos.")
+```
+
+## Actividades
+
+::: {.clasificar #ia-c3-termino titulo="¿Reproducibilidad, replicabilidad o robustez?" categorias="Reproducibilidad|Replicabilidad|Robustez"}
+- Vuelvo a ejecutar el código de un artículo con sus datos y obtengo las mismas tablas → Reproducibilidad
+- Repito el experimento con 300 personas nuevas → Replicabilidad
+- Analizo los mismos datos excluyendo atípicos de otra forma razonable y el resultado se mantiene → Robustez
+- Un laboratorio de otro país repite el protocolo original → Replicabilidad
+- No consigo obtener las cifras del artículo porque falta un paso del código → Reproducibilidad
+:::
+
+::: {.clasificar #ia-c3-causas titulo="¿Qué hace más probable que un resultado sea un falso positivo?" categorias="Lo hace más probable|Lo hace menos probable"}
+- Muestras pequeñas con poca potencia → Lo hace más probable
+- Hipótesis muy sorprendentes, con poca probabilidad previa → Lo hace más probable
+- Un plan de análisis preregistrado → Lo hace menos probable
+- Muchas decisiones analíticas tomadas después de ver los datos → Lo hace más probable
+- Un umbral de significación más estricto (0,005) → Lo hace menos probable
+- Un efecto replicado de forma independiente → Lo hace menos probable
+:::
+
+## Reto evaluable {#reto-c3}
+
+::: {.callout-important appearance="simple" icon="false"}
+## Reto del capítulo 3 · Intenta reproducir un artículo
+1. Elige un artículo de tu campo que comparta **datos y código**.
+2. Intenta **reproducir** una tabla o una figura principal. Documenta cada paso, cada obstáculo y el tiempo empleado.
+3. Haz **un análisis de robustez**: cambia una decisión razonable (exclusiones, covariables, transformación) y comprueba si el resultado se mantiene.
+4. Estima con el modelo de Ioannidis el VPP del hallazgo principal, justificando tus supuestos de probabilidad previa y potencia.
+
+**Entrega:** informe y código con la [plantilla de entrega](plantillas/entrega_reto.qmd). Este reto **no tiene solución en el libro**.
+:::
+
+## Autoevaluación
+
+Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la nota.
+
+::: {.webex-check .webex-box}
+1. Obtener los mismos resultados con los mismos datos y el mismo código es {{< mcq "replicabilidad" "*reproducibilidad computacional" "robustez" >}}
+2. ¿Qué porcentaje aproximado de replicaciones fue significativo en el proyecto de la Open Science Collaboration (2015)? {{< mcq "10 %" "*36 %" "70 %" "97 %" >}}
+3. Una sola replicación fallida demuestra que el estudio original era fraudulento. {{< torf false >}}
+4. Si la potencia baja, el valor predictivo positivo de un resultado significativo {{< mcq "sube" "*baja" "no cambia" >}}
+5. Que los estudios pequeños significativos sobrestimen el efecto se conoce como la maldición del {{< fitb "ganador" ignorecase=true >}}
+6. Según Button et al. (2013), la potencia mediana en neurociencia rondaba el {{< mcq "5 %" "*21 %" "50 %" "80 %" >}}
+7. El VPP depende de la probabilidad previa de que la hipótesis sea cierta. {{< torf true >}}
+8. ¿Por qué los tamaños del efecto de las replicaciones suelen ser menores?
+
+{{< longmcq "Porque los equipos que replican son menos competentes" "*Porque los originales publicados, seleccionados por ser significativos, tienden a sobrestimar el efecto" "Porque las replicaciones usan muestras más pequeñas" >}}
+:::
+
+::: {.webex-solution boton="Ver explicaciones"}
+- Mismos datos, mismo código.
+- En torno al 36 %, frente al 97 % de los originales.
+- Hay muchas causas posibles, incluido el azar.
+- Con menos potencia, una mayor proporción de los significativos son falsos.
+- *Winner's curse*.
+- Alrededor del 21 %.
+- Es la *R* del modelo de Ioannidis.
+- Selección por significación + muestras pequeñas = efectos inflados.
+:::
+
+## Recursos complementarios
+
+| Recurso | Para qué sirve |
+|---|---|
+| [OSF](https://osf.io/) | Compartir datos, código y materiales para que otros reproduzcan tu trabajo |
+| [Redes nacionales de reproducibilidad (UKRN)](https://ukrn.org/global-networks) | Directorio de redes nacionales, incluida la Red Española de Reproducibilidad (SPRN) |
+| [FORRT](https://forrt.org/) | Recursos docentes sobre reproducibilidad y ciencia abierta |

@@ -1,0 +1,167 @@
+---
+engine: markdown
+---
+
+# Capítulo 1. Qué es la ciencia de la ciencia {#sec-cap1}
+
+::: {.callout-note appearance="default"}
+## Objetivos
+- Distinguir ciencia de la ciencia, investigación sobre la investigación y metaciencia.
+- Conocer los hitos y las preguntas clásicas del campo.
+- Identificar las fuentes de datos y los métodos con que se estudia la ciencia.
+:::
+
+::: {.callout-note appearance="simple" icon="false"}
+## Glosario del capítulo
+[Ciencia de la ciencia](92-glosario.qmd#gl-scisci) · [Metaciencia](92-glosario.qmd#gl-metaciencia) · [Investigación sobre la investigación](92-glosario.qmd#gl-ror) · [Cienciometría](92-glosario.qmd#gl-cienciometria) · [Efecto Mateo](92-glosario.qmd#gl-mateo) · [Ley de Price](92-glosario.qmd#gl-price)
+:::
+
+::: {.callout-tip appearance="simple" icon="false"}
+## Descargas
+[Plantilla de entrega del reto (.qmd)](plantillas/entrega_reto.qmd){.btn .btn-outline-primary .btn-sm download="entrega_reto.qmd"}
+[Tema de estilo (.scss)](plantillas/informe.scss){.btn .btn-outline-primary .btn-sm download="informe.scss"}
+:::
+
+## Lectura obligatoria
+
+::: {.lectura}
+Fortunato, S.; Bergstrom, C. T.; Börner, K.; Evans, J. A.; Helbing, D.; Milojević, S. et al. (2018). [Science of science](https://doi.org/10.1126/science.aao0185). *Science*, 359(6379), eaao0185.
+:::
+
+### Lecturas complementarias {.unnumbered}
+
+- Price, D. J. de S. (1965). [Networks of scientific papers](https://doi.org/10.1126/science.149.3683.510). *Science*, 149(3683), 510-515. El nacimiento del análisis de redes de citas.
+- Merton, R. K. (1968). [The Matthew effect in science](https://doi.org/10.1126/science.159.3810.56). *Science*, 159(3810), 56-63. Por qué el reconocimiento se acumula en quien ya lo tiene.
+- Ioannidis, J. P. A.; Fanelli, D.; Dunne, D. D.; Goodman, S. N. (2015). [Meta-research: Evaluation and improvement of research methods and practices](https://doi.org/10.1371/journal.pbio.1002264). *PLOS Biology*, 13(10), e1002264.
+- Sinatra, R.; Wang, D.; Deville, P.; Song, C.; Barabási, A.-L. (2016). [Quantifying the evolution of individual scientific impact](https://doi.org/10.1126/science.aaf5239). *Science*, 354(6312), aaf5239.
+- Wuchty, S.; Jones, B. F.; Uzzi, B. (2007). [The increasing dominance of teams in production of knowledge](https://doi.org/10.1126/science.1136099). *Science*, 316(5827), 1036-1039.
+
+## 1. Tres nombres para un campo
+
+Tres etiquetas que se solapan, con acentos distintos:
+
+| Nombre | Pregunta central | Tradición |
+|---|---|---|
+| **Ciencia de la ciencia** (*science of science*, SciSci) | ¿Cómo funciona la ciencia como sistema: quién produce, colabora, cita e innova? | Cienciometría, sociología de la ciencia, física de redes |
+| **Investigación sobre la investigación** (*research on research*, RoR) | ¿Qué funciona para que la investigación sea mejor y más útil, y cómo deben decidir quienes la financian? | Política científica, evaluación |
+| **Metaciencia** o metainvestigación | ¿Son fiables los métodos y los resultados? ¿Qué reformas los mejoran? | Estadística, psicología, biomedicina |
+
+Lo que comparten es el giro **empírico**: no se limitan a opinar sobre cómo debería ser la ciencia, sino que reúnen datos (publicaciones, citas, financiación, replicaciones, encuestas) y los analizan como cualquier otro objeto de estudio. Fortunato et al. (2018) resumen el programa: entender los mecanismos que impulsan la ciencia para acelerar el descubrimiento y orientar las políticas científicas con evidencia.
+
+## 2. Una breve historia
+
+- **1939-1965.** John D. Bernal estudia la función social de la ciencia; Derek de Solla Price muestra que la literatura científica crece de forma exponencial y propone la **ley de Price**: una pequeña parte de los autores produce una gran parte de los trabajos. En 1965 dibuja la primera red de citas.
+- **1955-1963.** Eugene Garfield propone el índice de citas y crea el *Science Citation Index*, la base de Web of Science.
+- **1968.** Robert K. Merton describe el **efecto Mateo**: los investigadores ya reconocidos reciben más reconocimiento por contribuciones similares.
+- **Décadas de 1970-1990.** Nace la **cienciometría** como disciplina, con revistas propias (*Scientometrics*, 1978).
+- **2005.** Ioannidis publica *Why most published research findings are false*, punto de partida de la metaciencia contemporánea.
+- **Desde 2010.** Datos masivos (Web of Science, Scopus, OpenAlex, Dimensions), crisis de reproducibilidad, ciencia abierta y una nueva comunidad interdisciplinar: el Research on Research Institute (RoRI, 2019) o los congresos de metaciencia.
+
+## 3. Preguntas que se hace el campo
+
+| Ámbito | Ejemplos de preguntas | Un hallazgo |
+|---|---|---|
+| Colaboración | ¿Los equipos producen mejor ciencia que las personas solas? | Los equipos dominan cada vez más la producción y reciben más citas (Wuchty et al., 2007). |
+| Carreras | ¿Cuándo hacen los investigadores su trabajo más influyente? | El trabajo más citado puede aparecer en cualquier punto de la carrera (Sinatra et al., 2016). |
+| Impacto | ¿Se puede predecir qué artículos serán muy citados? | Las citas siguen patrones regulares, pero con mucha incertidumbre individual (Wang et al., 2013). |
+| Desigualdad | ¿Se reparte el reconocimiento con justicia? | El efecto Mateo y las brechas de género en autoría y citas están bien documentados. |
+| Fiabilidad | ¿Cuántos resultados publicados se replican? | Bastante menos de lo que se suponía en varias disciplinas (capítulo 3). |
+| Reforma | ¿Funcionan el preregistro o los informes registrados? | Hay pruebas prometedoras, y se siguen evaluando (capítulo 5). |
+
+## 4. Datos y métodos
+
+La ciencia deja un rastro digital enorme. Las **fuentes** habituales son las bases de datos bibliográficas (Web of Science, Scopus, Dimensions y la abierta [OpenAlex](https://openalex.org/)), los registros de identificadores (Crossref, DataCite, ORCID, ROR), las bases de financiación, los registros de ensayos y de preregistros, las patentes y las encuestas a investigadores.
+
+Los **métodos** combinan:
+
+- **Análisis de redes**: citas, coautorías, palabras clave.
+- **Modelos estadísticos y econométricos**: efectos de la financiación, de las políticas o de la movilidad.
+- **Experimentos y cuasiexperimentos**: por ejemplo, asignar al azar revisores o formatos de revisión.
+- **Replicaciones a gran escala**: repetir decenas de estudios para estimar su fiabilidad.
+- **Métodos cualitativos**: entrevistas y etnografías de laboratorio, que explican lo que los datos no ven.
+
+::: {.callout-important appearance="simple"}
+## Una advertencia de partida
+Los datos sobre la ciencia también tienen sesgos: cobertura desigual por idiomas, regiones y disciplinas, errores en la atribución de autores y afiliaciones, y diferencias entre bases de datos. Antes de concluir algo sobre «la ciencia», pregúntate qué ciencia está en tus datos.
+:::
+
+## Actividades
+
+::: {.clasificar #ia-c1-campo titulo="¿Qué enfoque es?" categorias="Ciencia de la ciencia|Investigación sobre la investigación|Metaciencia"}
+- Modelar cómo se propaga una idea nueva por la red de coautorías → Ciencia de la ciencia
+- Comprobar con un experimento si la revisión anónima reduce sesgos al financiar proyectos → Investigación sobre la investigación
+- Replicar 100 estudios de psicología para estimar cuántos se confirman → Metaciencia
+- Estudiar si los equipos grandes producen ideas más disruptivas que los pequeños → Ciencia de la ciencia
+- Evaluar si los informes registrados reducen el sesgo de publicación → Metaciencia
+- Analizar qué criterios usan las agencias para repartir fondos → Investigación sobre la investigación
+:::
+
+::: {.ordenar #ia-c1-historia titulo="Ordena los hitos"}
+1. Bernal publica *The social function of science* (1939)
+2. Garfield propone el índice de citas (1955)
+3. Price dibuja la primera red de citas (1965)
+4. Merton describe el efecto Mateo (1968)
+5. Ioannidis publica *Why most published research findings are false* (2005)
+6. Se crea el Research on Research Institute (2019)
+:::
+
+::: {.clasificar #ia-c1-fuentes titulo="¿Qué fuente usarías?" categorias="Base bibliográfica|Registro de identificadores|Registro de ensayos o preregistros|Encuesta o entrevista"}
+- Contar los artículos de una universidad entre 2015 y 2024 → Base bibliográfica
+- Desambiguar a dos investigadoras con el mismo nombre → Registro de identificadores // ORCID.
+- Comprobar si un ensayo clínico publicó todos sus resultados previstos → Registro de ensayos o preregistros
+- Saber por qué el personal investigador no comparte sus datos → Encuesta o entrevista
+:::
+
+## Práctica
+
+Elige un artículo de tu campo y búscalo en [OpenAlex](https://openalex.org/). Anota qué datos ofrece (autores, afiliaciones, conceptos, citas, financiación) y cuáles faltan o son incorrectos. Esa es la materia prima, y la primera limitación, de cualquier estudio de ciencia de la ciencia.
+
+## Reto evaluable {#reto-c1}
+
+::: {.callout-important appearance="simple" icon="false"}
+## Reto del capítulo 1 · Una pregunta de metaciencia sobre tu campo
+1. Formula una **pregunta** de ciencia de la ciencia o de metaciencia sobre tu disciplina (por ejemplo: «¿Ha crecido el tamaño de los equipos en mi campo?»).
+2. Indica qué **datos** necesitarías y de qué fuentes; justifica sus sesgos de cobertura.
+3. Propón un **método** para responderla y describe un resultado que confirmaría tu hipótesis y otro que la refutaría.
+4. Busca dos estudios que hayan abordado preguntas parecidas y resume qué encontraron.
+
+**Entrega:** un informe hecho con la [plantilla de entrega](plantillas/entrega_reto.qmd). Este reto **no tiene solución en el libro**: cada persona elige su pregunta y la corrección la hace el profesorado.
+:::
+
+## Autoevaluación
+
+Responde a todas las preguntas y pulsa **Mostrar respuestas**: verás en verde las acertadas, en rojo las falladas y tu recuento. Puedes corregir y volver a comprobar. No cuenta para la nota.
+
+::: {.webex-check .webex-box}
+1. La metaciencia se centra sobre todo en la fiabilidad de los métodos y los resultados, y en cómo mejorarlos. {{< torf true >}}
+2. El fenómeno por el que los investigadores ya reconocidos reciben más reconocimiento se llama efecto {{< fitb "Mateo" ignorecase=true >}}
+3. ¿Quién creó el *Science Citation Index*? {{< mcq "Robert K. Merton" "*Eugene Garfield" "Derek de Solla Price" >}}
+4. Los datos bibliográficos cubren por igual todas las lenguas y regiones. {{< torf false >}}
+5. Según Wuchty et al. (2007), la producción científica está cada vez más dominada por {{< mcq "investigadores individuales" "*equipos" "grandes empresas" >}}
+6. La base de datos bibliográfica abierta y gratuita del listado es {{< mcq "Web of Science" "Scopus" "*OpenAlex" >}}
+7. ¿Qué tienen en común los tres nombres del campo?
+
+{{< longmcq "Que solo usan métodos cualitativos" "*Que estudian la ciencia de forma empírica, con datos y métodos científicos" "Que se limitan a la biomedicina" >}}
+
+8. Replicar decenas de estudios para estimar cuántos se confirman es un método de la metaciencia. {{< torf true >}}
+:::
+
+::: {.webex-solution boton="Ver explicaciones"}
+- Fiabilidad y reforma son su núcleo.
+- Por el evangelio: «al que tiene, se le dará».
+- Garfield, en 1963 (propuesta en 1955).
+- La cobertura favorece al inglés, a Norteamérica y Europa y a algunas disciplinas.
+- Los equipos producen más y reciben más citas.
+- OpenAlex es abierta y gratuita.
+- El giro empírico es lo que los une.
+- Las replicaciones a gran escala son centrales en metaciencia.
+:::
+
+## Recursos complementarios
+
+| Recurso | Para qué sirve |
+|---|---|
+| [OpenAlex](https://openalex.org/) | Índice abierto de la literatura científica |
+| [Research on Research Institute](https://researchonresearch.org/) | Red internacional de investigación sobre la investigación |
+| [Center for Open Science](https://www.cos.io/) | Organización de referencia en metaciencia y ciencia abierta |
+| [Leiden Madtrics](https://www.leidenmadtrics.nl/) | Blog del CWTS (Universidad de Leiden) sobre indicadores y evaluación |
