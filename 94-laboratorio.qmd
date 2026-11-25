@@ -72,6 +72,56 @@ viewof nGrupo = rangoG("Participantes por grupo", [10, 200], {step: 5, value: 30
 - Contar después que «ya se esperaba» un efecto en un subgrupo que salió por casualidad → HARKing // Reescribe la historia de la hipótesis.
 :::
 
+## Laboratorio: diagrama de flujo PRISMA 2020 {#lab-prisma}
+
+::: {.laboratorio}
+::: {.laboratorio-etiqueta}
+Laboratorio · se ejecuta en tu navegador
+:::
+
+Toda revisión sistemática debe informar del recorrido de los registros, desde la búsqueda hasta los estudios incluidos, con el diagrama de **PRISMA 2020** (Page et al., 2021). Introduce tus números: el laboratorio comprueba que cuadran y dibuja el diagrama, que puedes descargar en SVG.
+
+```{ojs}
+//| echo: false
+{
+  const campos = [["bd", "Registros identificados en bases de datos", 1240], ["reg", "Registros de registros de ensayos u otras fuentes", 36], ["dup", "Duplicados eliminados", 310], ["auto", "Eliminados por otras razones antes del cribado", 0], ["excl1", "Excluidos por título y resumen", 820], ["norec", "Informes no recuperados", 6], ["excl2", "Informes excluidos tras lectura completa", 98], ["incl", "Estudios incluidos en la revisión", 42]];
+  const raiz = html`<div class="prisma-lab"><div class="row g-2"></div></div>`;
+  const ins = Object.fromEntries(campos.map(([id, et, v]) => { const d = html`<div class="col-sm-6"><label class="form-label small" for="pr-${id}">${et}</label><input id="pr-${id}" type="number" min="0" class="form-control form-control-sm" value="${v}"></div>`; raiz.firstElementChild.append(d); return [id, d.querySelector("input")]; }));
+  const razones = html`<div class="mt-2"><label class="form-label small" for="pr-raz">Razones de exclusión tras lectura completa (una por línea, «razón: n»)</label><textarea id="pr-raz" class="form-control form-control-sm" rows="3">Diseño no elegible: 51\nPoblación distinta: 30\nSin datos del resultado: 17</textarea></div>`;
+  const salida = html`<div role="status" aria-live="polite" class="mt-3"></div>`;
+  raiz.append(razones, salida);
+  const esc = (s) => String(s).replace(/[&<>]/g, (c) => ({"&": "&amp;", "<": "&lt;", ">": "&gt;"}[c]));
+  function dibujar() {
+    const v = Object.fromEntries(Object.entries(ins).map(([k, e]) => [k, Math.max(0, parseInt(e.value) || 0)]));
+    const cribados = v.bd + v.reg - v.dup - v.auto, buscados = cribados - v.excl1, evaluados = buscados - v.norec, calc = evaluados - v.excl2;
+    const raz = razones.querySelector("textarea").value.split("\n").map((l) => l.trim()).filter(Boolean);
+    const sumaRaz = raz.reduce((a, l) => a + (parseInt((l.match(/(\d+)\s*$/) || [0, 0])[1]) || 0), 0);
+    const avisos = [];
+    if (cribados < 0 || buscados < 0 || evaluados < 0) avisos.push("Hay más exclusiones que registros en alguna fase: revisa los números.");
+    if (calc !== v.incl) avisos.push(`Los números no cuadran: deberían quedar ${calc} estudios incluidos y has escrito ${v.incl}.`);
+    if (raz.length && sumaRaz !== v.excl2) avisos.push(`Las razones de exclusión suman ${sumaRaz}, pero has excluido ${v.excl2} informes.`);
+    const caja = (x, y, w, h, lineas, fondo = "#ffffff") => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fondo}" stroke="#0b0b0b" stroke-width="1.2"/>` + lineas.map((l, i) => `<text x="${x + 8}" y="${y + 18 + i * 15}" font-size="12" fill="#0b0b0b">${esc(l)}</text>`).join("");
+    const flecha = (x1, y1, x2, y2) => `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#0b0b0b" stroke-width="1.2" marker-end="url(#pr-f)"/>`;
+    const fase = (y, h, t) => `<rect x="0" y="${y}" width="28" height="${h}" fill="#cfe0f7"/><text transform="translate(18 ${y + h / 2}) rotate(-90)" font-size="12" font-weight="700" text-anchor="middle" fill="#0b0b0b">${t}</text>`;
+    let s = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 ${470 + Math.max(0, raz.length - 3) * 15}" width="100%" style="max-width:680px;background:#fff" role="img" aria-label="Diagrama PRISMA 2020: ${v.bd + v.reg} registros identificados, ${cribados} cribados, ${evaluados} informes evaluados, ${v.incl} estudios incluidos" font-family="Helvetica, Arial, sans-serif"><defs><marker id="pr-f" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#0b0b0b"/></marker></defs><rect width="640" height="100%" fill="#fff"/>`;
+    s += fase(10, 110, "Identificación") + fase(130, 250, "Cribado") + fase(390, 60, "Incluidos");
+    s += caja(40, 10, 260, 66, [`Registros identificados:`, `  bases de datos (n = ${v.bd})`, `  registros y otras fuentes (n = ${v.reg})`]);
+    s += caja(360, 10, 270, 66, [`Eliminados antes del cribado:`, `  duplicados (n = ${v.dup})`, `  otras razones (n = ${v.auto})`]) + flecha(300, 43, 358, 43);
+    s += flecha(170, 76, 170, 138) + caja(40, 140, 260, 40, [`Registros cribados (n = ${cribados})`]) + caja(360, 140, 270, 40, [`Excluidos (n = ${v.excl1})`]) + flecha(300, 160, 358, 160);
+    s += flecha(170, 180, 170, 208) + caja(40, 210, 260, 40, [`Informes buscados (n = ${buscados})`]) + caja(360, 210, 270, 40, [`No recuperados (n = ${v.norec})`]) + flecha(300, 230, 358, 230);
+    s += flecha(170, 250, 170, 278) + caja(40, 280, 260, 40, [`Informes evaluados (n = ${evaluados})`]) + caja(360, 280, 270, 30 + Math.max(1, raz.length) * 15, [`Excluidos (n = ${v.excl2}):`, ...raz.map((r) => "  " + r)]) + flecha(300, 300, 358, 300);
+    s += flecha(170, 320, 170, 398) + caja(40, 400, 260, 40, [`Estudios incluidos (n = ${v.incl})`], "#e2f0e5") + "</svg>";
+    const url = URL.createObjectURL(new Blob([s], {type: "image/svg+xml"}));
+    salida.innerHTML = `${avisos.length ? `<div class="alert alert-warning small">${avisos.map((a) => "⚠ " + esc(a)).join("<br>")}</div>` : '<p class="small">✓ Los números cuadran en todas las fases.</p>'}${s}<p class="mt-2"><a class="btn btn-outline-primary btn-sm" download="prisma-2020.svg" href="${url}">Descargar SVG</a></p>`;
+  }
+  raiz.addEventListener("input", dibujar); dibujar();
+  return raiz;
+}
+```
+
+El diagrama simplificado sigue la versión para revisiones nuevas que solo buscan en bases de datos y registros. Si tu revisión es una actualización o usa otras vías de búsqueda (citas, webs), usa la plantilla completa de PRISMA 2020.
+:::
+
 ## Para ver y seguir aprendiendo
 
 Son enlaces, no vídeos incrustados: el vídeo se abre en la web de quien lo publica, así esta página no carga rastreadores de terceros. La mayoría está en inglés; activa los subtítulos si los necesitas.
