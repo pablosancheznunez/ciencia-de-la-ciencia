@@ -85,6 +85,34 @@ Los **métodos** combinan:
 Los datos sobre la ciencia también tienen sesgos: cobertura desigual por idiomas, regiones y disciplinas, errores en la atribución de autores y afiliaciones, y diferencias entre bases de datos. Antes de concluir algo sobre «la ciencia», pregúntate qué ciencia está en tus datos.
 :::
 
+## Caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Convertir una inquietud en una pregunta de investigación sobre la investigación
+Inquietud: «Me parece que en mi campo casi nadie comparte los datos».
+
+1. **Pregunta descriptiva:** ¿qué proporción de artículos de mi campo publicados en 2024 incluye una declaración de disponibilidad de datos, y cuántos enlazan a un repositorio?
+2. **Datos:** una muestra aleatoria de 200 artículos de las revistas principales (lista y criterios fijados antes).
+3. **Codificación propia:** un libro de códigos con categorías (sin declaración, «a petición», repositorio enlazado, datos realmente accesibles).
+4. **Análisis:** proporciones con intervalos de confianza; comparación por revista y por política editorial.
+5. **Pregunta causal posterior:** ¿aumentó la disponibilidad después de que una revista adoptara una política obligatoria? (diferencias en diferencias, capítulo 12).
+:::
+
+## Ejercicios graduados
+
+**Básico.** Convierte en pregunta investigable: «La revisión por pares no funciona».
+
+::: {.webex-solution boton="Ver solución"}
+Por ejemplo: «¿Qué proporción de errores introducidos deliberadamente en un manuscrito detectan los revisores?» o «¿Coinciden los revisores de un mismo manuscrito en su recomendación?». Una pregunta investigable define qué se mide.
+:::
+
+**Avanzado.** Formula una pregunta descriptiva y otra causal sobre una práctica de tu campo y esboza los datos que necesitarías.
+
+::: {.webex-solution boton="Ver solución"}
+La descriptiva debe definir población, variable y fuente; la causal, la intervención, la comparación y un diseño posible (capítulo 12).
+:::
+
+
 ## Actividades
 
 ::: {.clasificar #ia-c1-campo titulo="¿Qué enfoque es?" categorias="Ciencia de la ciencia|Investigación sobre la investigación|Metaciencia"}

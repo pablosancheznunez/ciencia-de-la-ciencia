@@ -96,6 +96,35 @@ Ignorar el software, los datos o los resultados nulos castiga justo las práctic
 Has evaluado contribuciones, no contenedores. Los indicadores pueden informar, pero la decisión se basa en la lectura y en el perfil de la plaza.
 :::
 
+## Caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Redactar un CV narrativo a partir de un CV tradicional
+Un investigador pasa de una lista de 40 publicaciones a un CV narrativo de las convocatorias que siguen los principios de CoARA:
+
+1. **Contribución al conocimiento:** tres resultados destacados, explicando su importancia y su papel en cada uno (con CRediT), no solo dónde se publicaron.
+2. **Desarrollo de otras personas:** dirección de tesis, mentoría, formación.
+3. **Contribución a la comunidad investigadora:** revisión, edición, organización de congresos, ciencia abierta (datos y software publicados con DOI).
+4. **Contribución a la sociedad:** transferencia, divulgación, asesoramiento.
+
+Cada afirmación va acompañada de evidencias verificables (DOI, enlaces) y, si se usan indicadores, contextualizados por campo.
+:::
+
+## Ejercicios graduados
+
+**Básico.** ¿Qué diferencia principal hay entre un CV narrativo y uno tradicional?
+
+::: {.webex-solution boton="Ver solución"}
+El narrativo explica la contribución y su importancia con evidencias en varias dimensiones; el tradicional enumera resultados, sobre todo publicaciones.
+:::
+
+**Avanzado.** Convierte tu CV en un CV narrativo de dos páginas con las cuatro secciones del caso.
+
+::: {.webex-solution boton="Ver solución"}
+Cada sección debe incluir ejemplos concretos y verificables, explicar tu papel y evitar métricas sin contexto (como el factor de impacto de las revistas).
+:::
+
+
 ## Actividades
 
 ::: {.clasificar #ia-c6-hk titulo="¿Qué Principio de Hong Kong valora esta evidencia?" categorias="Prácticas responsables|Comunicación completa|Ciencia abierta|Investigación diversa|Otras contribuciones"}

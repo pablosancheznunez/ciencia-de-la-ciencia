@@ -169,6 +169,35 @@ if (is.numeric(.result) && .result > 0.08 && .result < 0.12) list(correct = TRUE
   list(correct = FALSE, message = "Usa 0.05 como umbral para la segunda variable.")
 ```
 
+## Caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Detectar el jardín de los senderos que se bifurcan en un análisis propio
+Un análisis de la relación entre sueño y rendimiento admite estas decisiones razonables:
+
+- Excluir o no a quienes duermen menos de 4 horas (¿error de respuesta?).
+- Medir el rendimiento con la nota media o con la nota del último semestre.
+- Controlar o no por horas de trabajo remunerado.
+- Usar el sueño continuo o en categorías.
+
+Hay 2 × 2 × 2 × 2 = 16 análisis posibles. Si se prueban varios y se informa solo del significativo, la tasa de falsos positivos aumenta mucho. Remedios: **preregistrar** las decisiones, informar de todas (análisis multiverso, capítulo 12) o separar claramente lo **confirmatorio** de lo **exploratorio**.
+:::
+
+## Ejercicios graduados
+
+**Básico.** ¿Qué práctica cuestionable es formular la hipótesis después de ver los resultados y presentarla como previa?
+
+::: {.webex-solution boton="Ver solución"}
+HARKing (*hypothesizing after the results are known*).
+:::
+
+**Avanzado.** Enumera las decisiones analíticas abiertas en tu proyecto actual y calcula cuántos análisis posibles generan.
+
+::: {.webex-solution boton="Ver solución"}
+Multiplica las opciones de cada decisión, indica cuáles fijarías en un preregistro y cuáles explorarías, informando de ello.
+:::
+
+
 ## Actividades
 
 ::: {.clasificar #ia-c4-tipo titulo="¿Mala conducta, práctica cuestionable o buena práctica?" categorias="Mala conducta (FFP)|Práctica cuestionable|Buena práctica"}

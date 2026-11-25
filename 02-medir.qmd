@@ -192,6 +192,35 @@ La declaración **DORA** (2012) añade una recomendación concreta: no usar mét
 «Cuando una medida se convierte en objetivo, deja de ser una buena medida». Si se premia el número de artículos, aparecen el troceado de resultados y las revistas depredadoras; si se premian las citas, las autocitas y los círculos de citación.
 :::
 
+## Caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## ¿Qué indicador uso para esta decisión?
+Una comisión debe repartir fondos internos entre tres departamentos (Historia, Química e Informática). Propuesta inicial: comparar el número total de citas. Problemas: las prácticas de citación difieren mucho por campo y el tamaño de los departamentos también.
+
+Alternativa responsable:
+
+1. Indicadores **normalizados** por campo (MNCS, PP(top 10 %)) y producción **por persona**.
+2. Producción no indexada en las bases internacionales (libros en Historia, conferencias en Informática).
+3. Informes cualitativos de cada departamento sobre su misión y sus resultados.
+4. Un panel que use los indicadores como **apoyo**, no como fórmula.
+:::
+
+## Ejercicios graduados
+
+**Básico.** ¿Por qué no es válido comparar el factor de impacto medio de las revistas de Historia y de Química?
+
+::: {.webex-solution boton="Ver solución"}
+Porque las prácticas de publicación y citación son muy distintas entre campos, y el factor de impacto describe revistas, no la calidad de los trabajos de cada departamento.
+:::
+
+**Avanzado.** Diseña un pequeño cuadro de indicadores para evaluar un grupo de investigación de tu área y justifica cada indicador con el Manifiesto de Leiden.
+
+::: {.webex-solution boton="Ver solución"}
+Debe combinar indicadores normalizados, información cualitativa y la misión del grupo, explicar los límites de cada indicador y permitir que el grupo verifique los datos.
+:::
+
+
 ## Actividades
 
 ::: {.clasificar #ia-c2-uso titulo="¿Uso responsable o irresponsable del indicador?" categorias="Responsable|Irresponsable"}

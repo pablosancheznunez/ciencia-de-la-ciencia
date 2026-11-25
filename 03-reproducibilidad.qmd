@@ -195,6 +195,37 @@ if (is.numeric(.result) && length(.result) == 1 && .result > 0.5) list(correct =
   list(correct = FALSE, message = "Calcula la media de la columna d de los significativos.")
 ```
 
+## Caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Intentar reproducir un análisis publicado
+Escoges un artículo con datos y código abiertos. Procedimiento:
+
+1. **Descargar** datos y código del repositorio indicado.
+2. **Reconstruir el entorno** (versiones de R o Python y paquetes, si se documentan).
+3. **Ejecutar** el código sin modificarlo y anotar cada error.
+4. **Comparar** cada cifra de las tablas y figuras principales con el artículo.
+5. **Clasificar el resultado:** reproducible sin cambios, con cambios menores, con diferencias numéricas, no reproducible.
+6. **Informar con cortesía** a los autores de las diferencias encontradas.
+
+Resultado típico: las cifras se reproducen tras resolver dependencias no documentadas, lo que demuestra la importancia de fijar el entorno (renv, uv, contenedores).
+:::
+
+## Ejercicios graduados
+
+**Básico.** ¿En qué se diferencian reproducibilidad y replicabilidad?
+
+::: {.webex-solution boton="Ver solución"}
+Reproducibilidad: mismos datos y mismo análisis, mismos resultados. Replicabilidad: datos nuevos para responder la misma pregunta, resultados compatibles.
+:::
+
+**Avanzado.** Intenta reproducir un análisis publicado de tu campo con datos abiertos y documenta el proceso con la clasificación del caso.
+
+::: {.webex-solution boton="Ver solución"}
+Informa del tiempo empleado, de los obstáculos (datos incompletos, código ausente, versiones) y de las cifras que coinciden y las que no.
+:::
+
+
 ## Actividades
 
 ::: {.clasificar #ia-c3-termino titulo="¿Reproducibilidad, replicabilidad o robustez?" categorias="Reproducibilidad|Replicabilidad|Robustez"}

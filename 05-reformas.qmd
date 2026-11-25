@@ -115,6 +115,37 @@ Existen plantillas de preregistro para datos secundarios: registra el plan antes
 Un preregistro tendría menos valor, pero aún puedes declarar qué análisis decidiste antes y cuáles después, compartir el código y hacer análisis de robustez o multiverso.
 :::
 
+## Caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Preparar un preregistro en OSF
+Para un estudio sobre el efecto de un taller de escritura en la productividad de doctorandos:
+
+1. **Hipótesis:** quienes hagan el taller enviarán más manuscritos en seis meses.
+2. **Diseño:** asignación aleatoria entre los inscritos (taller ahora o en el semestre siguiente).
+3. **Variables:** manuscritos enviados (resultado principal), satisfacción (secundario).
+4. **Tamaño muestral** con análisis de potencia y regla de parada.
+5. **Análisis principal** exacto (modelo y covariables) y criterios de exclusión.
+6. **Análisis exploratorios** declarados como tales.
+
+El preregistro se fecha y se hace público (o embargado) antes de recoger los datos. Desviarse es legítimo si se declara y se justifica.
+:::
+
+## Ejercicios graduados
+
+**Básico.** ¿Prohíbe el preregistro hacer análisis no previstos?
+
+::: {.webex-solution boton="Ver solución"}
+No: permite hacerlos, pero exige declararlos como exploratorios y distinguirlos de los confirmatorios.
+:::
+
+**Avanzado.** Redacta un preregistro con la plantilla de OSF para un estudio que podrías hacer tú solo con datos existentes.
+
+::: {.webex-solution boton="Ver solución"}
+Con datos existentes, hay que declarar qué se conoce ya de los datos y cómo se evita que ese conocimiento condicione el análisis (por ejemplo, separando una muestra de validación).
+:::
+
+
 ## Actividades
 
 ::: {.clasificar #ia-c5-medida titulo="¿A qué problema responde cada reforma?" categorias="Sesgo de publicación|Flexibilidad analítica|Errores no detectados|Incentivos"}
