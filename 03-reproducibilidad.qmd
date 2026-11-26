@@ -26,13 +26,13 @@ engine: markdown
 ## Lectura obligatoria
 
 ::: {.lectura}
-Open Science Collaboration (2015). [Estimating the reproducibility of psychological science](https://doi.org/10.1126/science.aac4716). *Science*, 349(6251), aac4716.
+@opensciencecollabora2015. [Estimating the reproducibility of psychological science](https://doi.org/10.1126/science.aac4716). *Science*, 349(6251), aac4716.
 :::
 
 ### Lecturas complementarias {.unnumbered}
 
-- Ioannidis, J. P. A. (2005). [Why most published research findings are false](https://doi.org/10.1371/journal.pmed.0020124). *PLoS Medicine*, 2(8), e124.
-- Button, K. S.; Ioannidis, J. P. A.; Mokrysz, C.; Nosek, B. A.; Flint, J.; Robinson, E. S. J.; Munafò, M. R. (2013). [Power failure: Why small sample size undermines the reliability of neuroscience](https://doi.org/10.1038/nrn3475). *Nature Reviews Neuroscience*, 14(5), 365-376.
+- @ioannidis2005
+- @button2013
 
 ## 1. Tres palabras que no son sinónimos
 
@@ -57,7 +57,7 @@ Un resultado puede no replicarse por azar en cualquiera de los dos estudios, por
 
 ## 3. Por qué tantos resultados no se replican
 
-Ioannidis (2005) mostró con un modelo sencillo que la probabilidad de que un resultado significativo sea verdadero, el **valor predictivo positivo** (VPP), depende de tres cosas:
+@ioannidis2005 mostró con un modelo sencillo que la probabilidad de que un resultado significativo sea verdadero, el **valor predictivo positivo** (VPP), depende de tres cosas:
 
 - La **probabilidad previa** de que la hipótesis sea cierta (expresada como razón *R* entre hipótesis verdaderas y falsas que se ponen a prueba).
 - La **potencia** del estudio (1 − β): la probabilidad de detectar el efecto si existe.
@@ -69,7 +69,7 @@ VPP = (1 − β) · R / [ (1 − β) · R + α ]
 
 Con hipótesis arriesgadas (R bajo) y estudios con poca potencia, la mayoría de los «hallazgos» significativos pueden ser falsos aunque nadie haga trampas. Si además hay **sesgo** (prácticas que convierten resultados nulos en significativos, capítulo 4), el VPP baja todavía más.
 
-Button et al. (2013) estimaron que la potencia mediana de los estudios de neurociencia rondaba el **21 %**. La poca potencia tiene un segundo efecto, la **maldición del ganador**: cuando un estudio pequeño sale significativo, lo hace casi siempre porque sobrestimó el efecto; por eso las replicaciones encuentran efectos más pequeños.
+@button2013 estimaron que la potencia mediana de los estudios de neurociencia rondaba el **21 %**. La poca potencia tiene un segundo efecto, la **maldición del ganador**: cuando un estudio pequeño sale significativo, lo hace casi siempre porque sobrestimó el efecto; por eso las replicaciones encuentran efectos más pequeños.
 
 ## 4. Laboratorio: ¿cuánto te fías de un resultado significativo? {#lab-c3-vpp}
 
@@ -263,11 +263,11 @@ Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la
 
 ::: {.webex-check .webex-box}
 1. Obtener los mismos resultados con los mismos datos y el mismo código es {{< mcq "replicabilidad" "*reproducibilidad computacional" "robustez" >}}
-2. ¿Qué porcentaje aproximado de replicaciones fue significativo en el proyecto de la Open Science Collaboration (2015)? {{< mcq "10 %" "*36 %" "70 %" "97 %" >}}
+2. ¿Qué porcentaje aproximado de replicaciones fue significativo en el proyecto de la @opensciencecollabora2015? {{< mcq "10 %" "*36 %" "70 %" "97 %" >}}
 3. Una sola replicación fallida demuestra que el estudio original era fraudulento. {{< torf false >}}
 4. Si la potencia baja, el valor predictivo positivo de un resultado significativo {{< mcq "sube" "*baja" "no cambia" >}}
 5. Que los estudios pequeños significativos sobrestimen el efecto se conoce como la maldición del {{< fitb "ganador" ignorecase=true >}}
-6. Según Button et al. (2013), la potencia mediana en neurociencia rondaba el {{< mcq "5 %" "*21 %" "50 %" "80 %" >}}
+6. Según @button2013, la potencia mediana en neurociencia rondaba el {{< mcq "5 %" "*21 %" "50 %" "80 %" >}}
 7. El VPP depende de la probabilidad previa de que la hipótesis sea cierta. {{< torf true >}}
 8. ¿Por qué los tamaños del efecto de las replicaciones suelen ser menores?
 

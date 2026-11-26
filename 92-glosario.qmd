@@ -21,7 +21,7 @@ Investigación sobre la fiabilidad de los métodos y resultados científicos y s
 Estudio cuantitativo de la ciencia, sobre todo a partir de publicaciones y citas. → [Capítulo 1](01-que-es.qmd)
 
 ### Efecto Mateo {#gl-mateo}
-Acumulación de reconocimiento en quienes ya lo tienen, descrita por Merton (1968). → [Capítulo 1](01-que-es.qmd)
+Acumulación de reconocimiento en quienes ya lo tienen, descrita por @merton1968. → [Capítulo 1](01-que-es.qmd)
 
 ### Ley de Price {#gl-price}
 Observación de que una pequeña parte de los autores produce una gran parte de las publicaciones de un campo. → [Capítulo 1](01-que-es.qmd)
@@ -32,7 +32,7 @@ Observación de que una pequeña parte de los autores produce una gran parte de 
 Referencia de un documento a otro. Mide uso o visibilidad, no calidad. → [Capítulo 2](02-medir.qmd)
 
 ### Índice h {#gl-indiceh}
-Mayor número *h* tal que *h* trabajos tienen al menos *h* citas cada uno (Hirsch, 2005). → [Capítulo 2](02-medir.qmd)
+Mayor número *h* tal que *h* trabajos tienen al menos *h* citas cada uno [@hirsch2005]. → [Capítulo 2](02-medir.qmd)
 
 ### Factor de impacto {#gl-fi}
 Media de citas recibidas en un año por los artículos que una revista publicó en los dos años anteriores. Es un indicador de revista. → [Capítulo 2](02-medir.qmd)
@@ -47,7 +47,7 @@ Distribución en la que pocos casos acumulan valores muy altos; la media no repr
 Indicadores basados en menciones en redes sociales, noticias, documentos de políticas o gestores de referencias. → [Capítulo 2](02-medir.qmd)
 
 ### Manifiesto de Leiden {#gl-leiden}
-Diez principios para el uso responsable de los indicadores en la evaluación (Hicks et al., 2015). → [Capítulo 2](02-medir.qmd)
+Diez principios para el uso responsable de los indicadores en la evaluación [@hicks2015]. → [Capítulo 2](02-medir.qmd)
 
 ## Reproducibilidad
 
@@ -121,7 +121,7 @@ Coalición para el avance de la evaluación de la investigación, creada en 2022
 Declaración de San Francisco sobre la evaluación de la investigación (2012). → [Capítulo 6](06-evaluacion.qmd)
 
 ### Principios de Hong Kong {#gl-hongkong}
-Cinco principios para evaluar a las personas investigadoras fomentando la integridad (Moher et al., 2020). → [Capítulo 6](06-evaluacion.qmd)
+Cinco principios para evaluar a las personas investigadoras fomentando la integridad [@moher2020]. → [Capítulo 6](06-evaluacion.qmd)
 
 ### CV narrativo {#gl-cvnarrativo}
 Currículo que presenta contribuciones seleccionadas y explicadas en lugar de listas exhaustivas. → [Capítulo 6](06-evaluacion.qmd)

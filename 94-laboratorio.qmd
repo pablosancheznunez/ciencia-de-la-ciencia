@@ -79,7 +79,7 @@ viewof nGrupo = rangoG("Participantes por grupo", [10, 200], {step: 5, value: 30
 Laboratorio · se ejecuta en tu navegador
 :::
 
-Toda revisión sistemática debe informar del recorrido de los registros, desde la búsqueda hasta los estudios incluidos, con el diagrama de **PRISMA 2020** (Page et al., 2021). Introduce tus números: el laboratorio comprueba que cuadran y dibuja el diagrama, que puedes descargar en SVG.
+Toda revisión sistemática debe informar del recorrido de los registros, desde la búsqueda hasta los estudios incluidos, con el diagrama de **PRISMA 2020** [@page2021]. Introduce tus números: el laboratorio comprueba que cuadran y dibuja el diagrama, que puedes descargar en SVG.
 
 ```{ojs}
 //| echo: false
@@ -126,4 +126,4 @@ El diagrama simplificado sigue la versión para revisiones nuevas que solo busca
 
 Son enlaces, no vídeos incrustados: el vídeo se abre en la web de quien lo publica, así esta página no carga rastreadores de terceros. La mayoría está en inglés; activa los subtítulos si los necesitas.
 
-- **[Is Most Published Research Wrong?](https://www.youtube.com/watch?v=42QuXLucH3Q)** — Veritasium (2016). Unos 12 minutos sobre valores p, p-hacking y la crisis de replicación, a partir del artículo de Ioannidis (2005).
+- **[Is Most Published Research Wrong?](https://www.youtube.com/watch?v=42QuXLucH3Q)** — Veritasium (2016). Unos 12 minutos sobre valores p, p-hacking y la crisis de replicación, a partir del artículo de @ioannidis2005.

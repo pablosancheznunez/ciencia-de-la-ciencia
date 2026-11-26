@@ -30,11 +30,11 @@ Fortunato, S.; Bergstrom, C. T.; Börner, K.; Evans, J. A.; Helbing, D.; Milojev
 
 ### Lecturas complementarias {.unnumbered}
 
-- Price, D. J. de S. (1965). [Networks of scientific papers](https://doi.org/10.1126/science.149.3683.510). *Science*, 149(3683), 510-515. El nacimiento del análisis de redes de citas.
-- Merton, R. K. (1968). [The Matthew effect in science](https://doi.org/10.1126/science.159.3810.56). *Science*, 159(3810), 56-63. Por qué el reconocimiento se acumula en quien ya lo tiene.
-- Ioannidis, J. P. A.; Fanelli, D.; Dunne, D. D.; Goodman, S. N. (2015). [Meta-research: Evaluation and improvement of research methods and practices](https://doi.org/10.1371/journal.pbio.1002264). *PLOS Biology*, 13(10), e1002264.
-- Sinatra, R.; Wang, D.; Deville, P.; Song, C.; Barabási, A.-L. (2016). [Quantifying the evolution of individual scientific impact](https://doi.org/10.1126/science.aaf5239). *Science*, 354(6312), aaf5239.
-- Wuchty, S.; Jones, B. F.; Uzzi, B. (2007). [The increasing dominance of teams in production of knowledge](https://doi.org/10.1126/science.1136099). *Science*, 316(5827), 1036-1039.
+- @price1965 — El nacimiento del análisis de redes de citas.
+- @merton1968 — Por qué el reconocimiento se acumula en quien ya lo tiene.
+- @ioannidis2015
+- @sinatra2016
+- @wuchty2007
 
 ## 1. Tres nombres para un campo
 
@@ -46,7 +46,7 @@ Tres etiquetas que se solapan, con acentos distintos:
 | **Investigación sobre la investigación** (*research on research*, RoR) | ¿Qué funciona para que la investigación sea mejor y más útil, y cómo deben decidir quienes la financian? | Política científica, evaluación |
 | **Metaciencia** o metainvestigación | ¿Son fiables los métodos y los resultados? ¿Qué reformas los mejoran? | Estadística, psicología, biomedicina |
 
-Lo que comparten es el giro **empírico**: no se limitan a opinar sobre cómo debería ser la ciencia, sino que reúnen datos (publicaciones, citas, financiación, replicaciones, encuestas) y los analizan como cualquier otro objeto de estudio. Fortunato et al. (2018) resumen el programa: entender los mecanismos que impulsan la ciencia para acelerar el descubrimiento y orientar las políticas científicas con evidencia.
+Lo que comparten es el giro **empírico**: no se limitan a opinar sobre cómo debería ser la ciencia, sino que reúnen datos (publicaciones, citas, financiación, replicaciones, encuestas) y los analizan como cualquier otro objeto de estudio. @fortunato2018 resumen el programa: entender los mecanismos que impulsan la ciencia para acelerar el descubrimiento y orientar las políticas científicas con evidencia.
 
 ## 2. Una breve historia
 
@@ -61,9 +61,9 @@ Lo que comparten es el giro **empírico**: no se limitan a opinar sobre cómo de
 
 | Ámbito | Ejemplos de preguntas | Un hallazgo |
 |---|---|---|
-| Colaboración | ¿Los equipos producen mejor ciencia que las personas solas? | Los equipos dominan cada vez más la producción y reciben más citas (Wuchty et al., 2007). |
-| Carreras | ¿Cuándo hacen los investigadores su trabajo más influyente? | El trabajo más citado puede aparecer en cualquier punto de la carrera (Sinatra et al., 2016). |
-| Impacto | ¿Se puede predecir qué artículos serán muy citados? | Las citas siguen patrones regulares, pero con mucha incertidumbre individual (Wang et al., 2013). |
+| Colaboración | ¿Los equipos producen mejor ciencia que las personas solas? | Los equipos dominan cada vez más la producción y reciben más citas [@wuchty2007]. |
+| Carreras | ¿Cuándo hacen los investigadores su trabajo más influyente? | El trabajo más citado puede aparecer en cualquier punto de la carrera [@sinatra2016]. |
+| Impacto | ¿Se puede predecir qué artículos serán muy citados? | Las citas siguen patrones regulares, pero con mucha incertidumbre individual [@wang2013]. |
 | Desigualdad | ¿Se reparte el reconocimiento con justicia? | El efecto Mateo y las brechas de género en autoría y citas están bien documentados. |
 | Fiabilidad | ¿Cuántos resultados publicados se replican? | Bastante menos de lo que se suponía en varias disciplinas (capítulo 3). |
 | Reforma | ¿Funcionan el preregistro o los informes registrados? | Hay pruebas prometedoras, y se siguen evaluando (capítulo 5). |
@@ -165,7 +165,7 @@ Responde a todas las preguntas y pulsa **Mostrar respuestas**: verás en verde l
 2. El fenómeno por el que los investigadores ya reconocidos reciben más reconocimiento se llama efecto {{< fitb "Mateo" ignorecase=true >}}
 3. ¿Quién creó el *Science Citation Index*? {{< mcq "Robert K. Merton" "*Eugene Garfield" "Derek de Solla Price" >}}
 4. Los datos bibliográficos cubren por igual todas las lenguas y regiones. {{< torf false >}}
-5. Según Wuchty et al. (2007), la producción científica está cada vez más dominada por {{< mcq "investigadores individuales" "*equipos" "grandes empresas" >}}
+5. Según @wuchty2007, la producción científica está cada vez más dominada por {{< mcq "investigadores individuales" "*equipos" "grandes empresas" >}}
 6. La base de datos bibliográfica abierta y gratuita del listado es {{< mcq "Web of Science" "Scopus" "*OpenAlex" >}}
 7. ¿Qué tienen en común los tres nombres del campo?
 

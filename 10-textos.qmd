@@ -32,7 +32,7 @@ Grimmer, J.; Stewart, B. M. (2013). [Text as data: The promise and pitfalls of a
 
 Títulos, resúmenes, textos completos, informes de revisión, convocatorias o políticas científicas son fuentes masivas para la metaciencia: permiten estudiar la evolución de los temas, la novedad, el lenguaje promocional («sin precedentes», «novedoso»), la descripción de métodos o la presencia de declaraciones de datos abiertos.
 
-Grimmer y Stewart (2013) proponen cuatro principios que siguen vigentes:
+@grimmer2013 proponen cuatro principios que siguen vigentes:
 
 1. **Todos los modelos cuantitativos del lenguaje son erróneos, pero algunos son útiles**: simplifican el texto (por ejemplo, ignorando el orden de las palabras).
 2. **Los métodos automáticos amplían, no sustituyen, la lectura humana.**
@@ -167,7 +167,7 @@ if (isTRUE(all.equal(as.numeric(.result), 0.6))) list(correct = TRUE, message = 
 Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la nota.
 
 ::: {.webex-check .webex-box}
-1. Según Grimmer y Stewart (2013), los métodos automáticos sustituyen a la lectura humana. {{< torf false >}}
+1. Según @grimmer2013, los métodos automáticos sustituyen a la lectura humana. {{< torf false >}}
 2. Dividir un texto en unidades es la {{< fitb "tokenización" "tokenizacion" ignorecase=true >}}
 3. Un término presente en todos los documentos tiene un idf de {{< mcq "*0" "1" "infinito" >}}
 4. De lo que el modelo marca, la proporción correcta es la {{< mcq "exhaustividad" "*precisión" "densidad" >}}

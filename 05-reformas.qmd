@@ -30,15 +30,15 @@ Munafò, M. R.; Nosek, B. A.; Bishop, D. V. M.; Button, K. S.; Chambers, C. D.; 
 
 ### Lecturas complementarias {.unnumbered}
 
-- Nosek, B. A.; Ebersole, C. R.; DeHaven, A. C.; Mellor, D. T. (2018). [The preregistration revolution](https://doi.org/10.1073/pnas.1708274114). *PNAS*, 115(11), 2600-2606.
-- Chambers, C. D. (2013). [Registered Reports: A new publishing initiative at *Cortex*](https://doi.org/10.1016/j.cortex.2012.12.016). *Cortex*, 49(3), 609-610.
-- Kaplan, R. M.; Irvin, V. L. (2015). [Likelihood of null effects of large NHLBI clinical trials has increased over time](https://doi.org/10.1371/journal.pone.0132382). *PLoS ONE*, 10(8), e0132382.
-- Scheel, A. M.; Schijen, M. R. M. J.; Lakens, D. (2021). [An excess of positive results: Comparing the standard psychology literature with Registered Reports](https://doi.org/10.1177/25152459211007467). *Advances in Methods and Practices in Psychological Science*, 4(2).
-- Kidwell, M. C. et al. (2016). [Badges to acknowledge open practices: A simple, low-cost, effective method for increasing transparency](https://doi.org/10.1371/journal.pbio.1002456). *PLOS Biology*, 14(5), e1002456.
+- @nosek2018
+- @chambers2013
+- @kaplan2015
+- @scheel2021
+- @kidwell2016
 
 ## 1. Un manifiesto en cinco frentes
 
-Munafò et al. (2017) agrupan las medidas para una ciencia más reproducible en cinco ámbitos:
+@munafo2017 agrupan las medidas para una ciencia más reproducible en cinco ámbitos:
 
 | Ámbito | Medidas |
 |---|---|
@@ -50,9 +50,9 @@ Munafò et al. (2017) agrupan las medidas para una ciencia más reproducible en 
 
 ## 2. Preregistro e informes registrados
 
-Un **preregistro** es un plan del estudio (hipótesis, diseño, muestra, variables, análisis) registrado con fecha antes de ver los datos, en un repositorio público como [OSF Registries](https://osf.io/registries) o [AsPredicted](https://aspredicted.org/). Su función no es prohibir la exploración, sino **distinguir** lo confirmatorio de lo exploratorio (Nosek et al., 2018). Desviarse del plan es legítimo si se declara y se justifica.
+Un **preregistro** es un plan del estudio (hipótesis, diseño, muestra, variables, análisis) registrado con fecha antes de ver los datos, en un repositorio público como [OSF Registries](https://osf.io/registries) o [AsPredicted](https://aspredicted.org/). Su función no es prohibir la exploración, sino **distinguir** lo confirmatorio de lo exploratorio [@nosek2018]. Desviarse del plan es legítimo si se declara y se justifica.
 
-Un **informe registrado** (*Registered Report*) va un paso más allá: la revista revisa la introducción, los métodos y el plan de análisis **antes** de recoger los datos y, si los acepta, se compromete a publicar el artículo **sea cual sea el resultado** (Chambers, 2013). Así desaparecen a la vez el incentivo para el *p-hacking* y el sesgo de publicación. Hoy los ofrecen cientos de revistas.
+Un **informe registrado** (*Registered Report*) va un paso más allá: la revista revisa la introducción, los métodos y el plan de análisis **antes** de recoger los datos y, si los acepta, se compromete a publicar el artículo **sea cual sea el resultado** [@chambers2013]. Así desaparecen a la vez el incentivo para el *p-hacking* y el sesgo de publicación. Hoy los ofrecen cientos de revistas.
 
 ![Del estudio tradicional al informe registrado: la revisión y la aceptación se adelantan a la recogida de datos.](figuras/c5_informe.svg){#fig-c5-informe fig-alt="Dos flujos. Tradicional: idea, diseño, recogida de datos, análisis, redacción y revisión por pares; la decisión depende del resultado. Informe registrado: idea, diseño, revisión de la fase 1 y aceptación en principio, recogida de datos, análisis y revisión de la fase 2, que solo comprueba que se siguió el plan; el resultado no influye en la publicación."}
 
@@ -69,9 +69,9 @@ Compartir permite **reproducir**, **reutilizar** y **detectar errores**. Los pri
 
 La metaciencia también se evalúa a sí misma. Algunas pruebas:
 
-- Tras introducir **insignias** por compartir datos en *Psychological Science*, la proporción de artículos con datos abiertos aumentó mucho más que en revistas comparables (Kidwell et al., 2016).
+- Tras introducir **insignias** por compartir datos en *Psychological Science*, la proporción de artículos con datos abiertos aumentó mucho más que en revistas comparables [@kidwell2016].
 - En los grandes ensayos clínicos financiados por el NHLBI estadounidense sobre fármacos o suplementos para enfermedades cardiovasculares, la proporción de ensayos con resultado positivo cayó notablemente tras exigirse el **registro previo** del resultado principal en 2000 (Kaplan e Irvin, 2015).
-- Los **informes registrados** publican una proporción mucho mayor de resultados que no apoyan la hipótesis que los artículos tradicionales (Scheel et al., 2021).
+- Los **informes registrados** publican una proporción mucho mayor de resultados que no apoyan la hipótesis que los artículos tradicionales [@scheel2021].
 
 Son pruebas observacionales en su mayoría, y la investigación sobre qué intervenciones funcionan, en qué disciplinas y con qué costes, sigue abierta. La reforma también tiene riesgos: burocracia, «lavado de ciencia abierta» (*open washing*) o desigualdades entre quienes tienen recursos para cumplir y quienes no.
 
@@ -185,7 +185,7 @@ Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la
 2. En un informe registrado, la revista acepta el artículo en principio {{< mcq "después de ver los resultados" "*antes de que se recojan los datos" "solo si el resultado es significativo" >}}
 3. Los datos FAIR siempre tienen que ser abiertos. {{< torf false >}}
 4. La guía de comunicación para revisiones sistemáticas es {{< mcq "CONSORT" "*PRISMA" "ARRIVE" >}}
-5. Según Kidwell et al. (2016), las insignias por compartir datos {{< mcq "no tuvieron efecto" "*se asociaron a un gran aumento de artículos con datos abiertos" "redujeron la calidad de los datos" >}}
+5. Según @kidwell2016, las insignias por compartir datos {{< mcq "no tuvieron efecto" "*se asociaron a un gran aumento de artículos con datos abiertos" "redujeron la calidad de los datos" >}}
 6. Un plan de estudio registrado con fecha antes de ver los datos es un {{< fitb "preregistro" ignorecase=true >}}
 7. Desviarse del preregistro es legítimo si se declara y se justifica. {{< torf true >}}
 8. ¿Qué dos problemas elimina a la vez un informe registrado?

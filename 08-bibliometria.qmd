@@ -30,7 +30,7 @@ Waltman, L. (2016). [A review of the literature on citation impact indicators](h
 
 ### Lectura complementaria {.unnumbered}
 
-- Hicks, D.; Wouters, P.; Waltman, L.; de Rijcke, S.; Rafols, I. (2015). [Bibliometrics: The Leiden Manifesto for research metrics](https://doi.org/10.1038/520429a). *Nature*, 520(7548), 429-431.
+- @hicks2015
 
 ## 1. Contar publicaciones: completo o fraccionario
 
@@ -46,7 +46,7 @@ Cuando un artículo tiene autores de varias instituciones, ¿a quién se atribuy
 | 3 | B, B, B, A | 1 / 1 | 0,25 / 0,75 |
 | **Total** | | **3 / 2** | **1,92 / 1,08** |
 
-El recuento completo premia la colaboración amplia; el fraccionario es más adecuado para comparar productividad entre unidades con prácticas de colaboración distintas (Waltman, 2016).
+El recuento completo premia la colaboración amplia; el fraccionario es más adecuado para comparar productividad entre unidades con prácticas de colaboración distintas [@waltman2016].
 
 ## 2. Medir el impacto de citación
 
@@ -57,13 +57,13 @@ Las citas dependen del **campo** (en biomedicina se cita mucho más que en matem
 - **Indicadores de percentiles**: la proporción de trabajos de una unidad que están en el 10 % (o el 1 %) más citado de su campo y año, **PP(top 10 %)**. Son más robustos que las medias, porque una sola publicación muy citada no los dispara.
 - **Ventana de citación**: contar las citas en un periodo fijo (por ejemplo, tres años tras la publicación) para comparar cohortes.
 
-Waltman (2016) repasa además los problemas de los indicadores populares: el **factor de impacto** describe revistas, no artículos, y el **índice h** mezcla producción e impacto, depende de la edad académica y del campo, y no se puede normalizar bien.
+@waltman2016 repasa además los problemas de los indicadores populares: el **factor de impacto** describe revistas, no artículos, y el **índice h** mezcla producción e impacto, depende de la edad académica y del campo, y no se puede normalizar bien.
 
 ![Las citas siguen una distribución muy asimétrica: la media queda muy por encima de la mediana, por eso los percentiles describen mejor el impacto que las medias.](figuras/c8_asimetria.svg){#fig-c8-asim fig-alt="Histograma de citas muy sesgado a la derecha, con la mayoría de trabajos con pocas citas y una cola larga. Líneas verticales marcan la mediana, la media y el umbral del 10 % más citado."}
 
 ## 3. Uso responsable: el Manifiesto de Leiden
 
-Hicks et al. (2015) propusieron diez principios para evaluar con indicadores. Entre ellos: la evaluación cuantitativa debe **apoyar** el juicio experto, no sustituirlo; hay que medir el desempeño en relación con la **misión** de la unidad; proteger la investigación **relevante localmente**; mantener los datos y el análisis **abiertos y transparentes**; permitir que los evaluados **verifiquen** los datos; tener en cuenta las **diferencias entre campos**; evaluar a las personas con un juicio cualitativo de su trayectoria; evitar la **falsa precisión**; reconocer los **efectos sistémicos** de los indicadores (incentivos y adaptación); y **revisar** los indicadores periódicamente.
+@hicks2015 propusieron diez principios para evaluar con indicadores. Entre ellos: la evaluación cuantitativa debe **apoyar** el juicio experto, no sustituirlo; hay que medir el desempeño en relación con la **misión** de la unidad; proteger la investigación **relevante localmente**; mantener los datos y el análisis **abiertos y transparentes**; permitir que los evaluados **verifiquen** los datos; tener en cuenta las **diferencias entre campos**; evaluar a las personas con un juicio cualitativo de su trayectoria; evitar la **falsa precisión**; reconocer los **efectos sistémicos** de los indicadores (incentivos y adaptación); y **revisar** los indicadores periódicamente.
 
 ## Ejemplo resuelto: recuento fraccionario por país
 

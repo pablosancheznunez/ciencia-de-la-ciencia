@@ -29,9 +29,9 @@ Page, M. J.; McKenzie, J. E.; Bossuyt, P. M.; Boutron, I.; Hoffmann, T. C. et al
 
 ### Lecturas complementarias {.unnumbered}
 
-- Egger, M.; Davey Smith, G.; Schneider, M.; Minder, C. (1997). [Bias in meta-analysis detected by a simple, graphical test](https://doi.org/10.1136/bmj.315.7109.629). *BMJ*, 315(7109), 629-634.
-- Simonsohn, U.; Nelson, L. D.; Simmons, J. P. (2014). [P-curve: A key to the file-drawer](https://doi.org/10.1037/a0033242). *Journal of Experimental Psychology: General*, 143(2), 534-547.
-- Brown, N. J. L.; Heathers, J. A. J. (2017). [The GRIM test: A simple technique detects numerous anomalies in the reporting of results in psychology](https://doi.org/10.1177/1948550616673876). *Social Psychological and Personality Science*, 8(4), 363-369.
+- @egger1997
+- @simonsohn2014
+- @brown2017
 
 ## 1. Revisar de forma sistemática
 
@@ -43,7 +43,7 @@ Page, M. J.; McKenzie, J. E.; Bossuyt, P. M.; Boutron, I.; Hoffmann, T. C. et al
 | **Metaanálisis** | ¿Cuál es el efecto medio y cuánto varía? | Combina estadísticamente los resultados de los estudios |
 | **Revisión de revisiones** (*umbrella*) | ¿Qué dicen las revisiones existentes? | Sintetiza revisiones |
 
-**PRISMA 2020** (Page et al., 2021) es la guía para **informar** de una revisión sistemática: una lista de comprobación de 27 ítems y un diagrama de flujo que muestra cuántos registros se identifican, criban, excluyen (con motivos) e incluyen. Conviene registrar el protocolo antes de empezar (PROSPERO para salud; OSF para otros campos).
+**PRISMA 2020** [@page2021] es la guía para **informar** de una revisión sistemática: una lista de comprobación de 27 ítems y un diagrama de flujo que muestra cuántos registros se identifican, criban, excluyen (con motivos) e incluyen. Conviene registrar el protocolo antes de empezar (PROSPERO para salud; OSF para otros campos).
 
 ## 2. Combinar resultados: el metaanálisis
 
@@ -58,9 +58,9 @@ En R, el paquete **metafor** es la referencia: `rma(yi, vi, data = d)` ajusta un
 Si los estudios con resultados significativos se publican más, el metaanálisis **sobrestima** el efecto. La metaciencia ha desarrollado varias herramientas:
 
 - **Gráfico de embudo**: el efecto de cada estudio frente a su precisión. Sin sesgo, los estudios se reparten de forma simétrica; si faltan estudios pequeños con efectos nulos, aparece **asimetría**.
-- **Prueba de Egger** (Egger et al., 1997): una regresión que contrasta esa asimetría. Variantes como **PET-PEESE** estiman el efecto corregido.
-- **p-curve** (Simonsohn et al., 2014): analiza la distribución de los valores p significativos. Si hay un efecto real, abundan los p muy pequeños (curva sesgada a la derecha); si la curva es plana o se acumula cerca de 0,05, sugiere ausencia de efecto o prácticas cuestionables. **z-curve** extiende la idea para estimar la tasa de replicabilidad esperada.
-- **GRIM** (Brown y Heathers, 2017): comprueba si una media de datos enteros (por ejemplo, de una escala Likert) es matemáticamente posible con el tamaño muestral declarado.
+- **Prueba de Egger** [@egger1997]: una regresión que contrasta esa asimetría. Variantes como **PET-PEESE** estiman el efecto corregido.
+- **p-curve** [@simonsohn2014]: analiza la distribución de los valores p significativos. Si hay un efecto real, abundan los p muy pequeños (curva sesgada a la derecha); si la curva es plana o se acumula cerca de 0,05, sugiere ausencia de efecto o prácticas cuestionables. **z-curve** extiende la idea para estimar la tasa de replicabilidad esperada.
+- **GRIM** [@brown2017]: comprueba si una media de datos enteros (por ejemplo, de una escala Likert) es matemáticamente posible con el tamaño muestral declarado.
 - **statcheck**: recalcula los valores p a partir de los estadísticos publicados (*t*, *F*, χ²) y detecta incoherencias.
 
 ## Laboratorio: un embudo con sesgo de publicación {#lab-c11-embudo}

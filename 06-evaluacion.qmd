@@ -30,9 +30,9 @@ Moher, D.; Bouter, L.; Kleinert, S.; Glasziou, P.; Sham, M. H.; Barbour, V. et a
 
 ### Lecturas complementarias {.unnumbered}
 
-- Hicks, D. et al. (2015). [Bibliometrics: The Leiden Manifesto for research metrics](https://doi.org/10.1038/520429a). *Nature*, 520, 429-431.
+- @hicks2015
 - [Compromisos del Acuerdo para la reforma de la evaluación de la investigación (CoARA)](https://coara.org/agreement/the-commitments/), 2022.
-- Smaldino, P. E.; McElreath, R. (2016). [The natural selection of bad science](https://doi.org/10.1098/rsos.160384). *Royal Society Open Science*, 3(9), 160384.
+- @smaldino2016
 
 ## 1. Lo que se evalúa es lo que se hace
 
@@ -47,7 +47,7 @@ La evaluación decide quién obtiene una plaza, un proyecto, una promoción o un
 | **Principios de Hong Kong** | 2020 | Evaluar a las personas por prácticas que favorecen la integridad |
 | **CoARA** | 2022 | Compromiso de instituciones europeas para reformar su evaluación, con plazos |
 
-Los **Principios de Hong Kong** (Moher et al., 2020) proponen valorar:
+Los **Principios de Hong Kong** [@moher2020] proponen valorar:
 
 1. Las prácticas responsables en todo el ciclo de la investigación.
 2. La comunicación completa y transparente, sea cual sea el resultado.

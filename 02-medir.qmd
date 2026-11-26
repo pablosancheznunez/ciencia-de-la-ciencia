@@ -31,8 +31,8 @@ Hicks, D.; Wouters, P.; Waltman, L.; de Rijcke, S.; Rafols, I. (2015). [Bibliome
 
 ### Lecturas complementarias {.unnumbered}
 
-- Hirsch, J. E. (2005). [An index to quantify an individual's scientific research output](https://doi.org/10.1073/pnas.0507655102). *PNAS*, 102(46), 16569-16572.
-- Wang, D.; Song, C.; Barabási, A.-L. (2013). [Quantifying long-term scientific impact](https://doi.org/10.1126/science.1237825). *Science*, 342(6154), 127-132.
+- @hirsch2005
+- @wang2013
 - [Declaración de San Francisco sobre la Evaluación de la Investigación (DORA)](https://sfdora.org/read/es/), 2012.
 
 ## 1. Qué es una cita
@@ -53,7 +53,7 @@ Tres hechos que conviene tener siempre presentes:
 |---|---|---|
 | **Recuento de citas** | Atención recibida por un trabajo | Depende del campo, la antigüedad y el tipo de documento |
 | **Factor de impacto** (de la revista) | Citas medias recibidas por los artículos de una revista en dos años | Es de la **revista**, no del artículo; media de una distribución asimétrica; manipulable |
-| **Índice h** (Hirsch, 2005) | El mayor *h* tal que *h* trabajos tienen al menos *h* citas | Crece con la edad académica; ignora las citas de los muy citados; no comparable entre campos |
+| **Índice h** [@hirsch2005] | El mayor *h* tal que *h* trabajos tienen al menos *h* citas | Crece con la edad académica; ignora las citas de los muy citados; no comparable entre campos |
 | **Citas normalizadas** (p. ej. MNCS, FWCI) | Citas relativas a la media mundial del mismo campo, año y tipo | Dependen de cómo se definen los campos |
 | **Percentiles** (p. ej. % en el 10 % más citado) | Posición en la distribución del campo | Necesitan muchos trabajos para ser estables |
 | **Altmetría** | Menciones en redes, noticias, políticas, gestores | Mide atención, no calidad; fácil de inflar |
@@ -172,7 +172,7 @@ if (isTRUE(all.equal(as.numeric(.result), 3))) list(correct = TRUE, message = "C
 
 ## 5. Usar las métricas con responsabilidad
 
-El **Manifiesto de Leiden** (Hicks et al., 2015) propone diez principios. Los más citados:
+El **Manifiesto de Leiden** [@hicks2015] propone diez principios. Los más citados:
 
 1. La evaluación cuantitativa debe **apoyar** el juicio experto cualitativo, no sustituirlo.
 2. Medir el desempeño en relación con la **misión** de la institución, el grupo o la persona.

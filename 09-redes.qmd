@@ -30,7 +30,7 @@ Boyack, K. W.; Klavans, R. (2010). [Co-citation analysis, bibliographic coupling
 
 ### Lectura complementaria {.unnumbered}
 
-- van Eck, N. J.; Waltman, L. (2010). [Software survey: VOSviewer, a computer program for bibliometric mapping](https://doi.org/10.1007/s11192-009-0146-3). *Scientometrics*, 84(2), 523-538.
+- @vaneck2010
 
 ## 1. Cinco formas de relacionar documentos y personas
 
@@ -44,7 +44,7 @@ Boyack, K. W.; Klavans, R. (2010). [Co-citation analysis, bibliographic coupling
 
 ![La cocitación une documentos citados juntos; el acoplamiento une documentos que citan lo mismo.](figuras/c9_relaciones.svg){#fig-c9-rel fig-alt="Dos esquemas. A la izquierda, cocitación: un artículo nuevo arriba cita a dos artículos antiguos abajo, que quedan unidos por una línea discontinua. A la derecha, acoplamiento: dos artículos nuevos arriba citan a la misma referencia antigua abajo, y quedan unidos por una línea discontinua."}
 
-Boyack y Klavans (2010) compararon los tres enfoques basados en citas con más de dos millones de artículos biomédicos. Encontraron que el **acoplamiento bibliográfico** delimitaba los frentes de investigación con algo más de precisión que la cocitación, y que la citación directa era la menos precisa en ventanas cortas; los enfoques híbridos que combinan citas y texto mejoraban los resultados.
+@boyack2010 compararon los tres enfoques basados en citas con más de dos millones de artículos biomédicos. Encontraron que el **acoplamiento bibliográfico** delimitaba los frentes de investigación con algo más de precisión que la cocitación, y que la citación directa era la menos precisa en ventanas cortas; los enfoques híbridos que combinan citas y texto mejoraban los resultados.
 
 ## 2. Medidas básicas
 
@@ -57,7 +57,7 @@ Boyack y Klavans (2010) compararon los tres enfoques basados en citas con más d
 
 ## 3. Mapas de la ciencia
 
-Herramientas como **VOSviewer** (van Eck y Waltman, 2010), CiteSpace, bibliometrix (R) o Gephi convierten las redes en mapas. Al leerlos, recuerda que:
+Herramientas como **VOSviewer** [@vaneck2010], CiteSpace, bibliometrix (R) o Gephi convierten las redes en mapas. Al leerlos, recuerda que:
 
 - La **posición** refleja similitud, pero la distancia exacta depende del algoritmo y de sus parámetros.
 - Los **umbrales** (mínimo de citas o de coocurrencias) cambian qué aparece; documenta y prueba varios.
@@ -192,7 +192,7 @@ Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la
 ::: {.webex-check .webex-box}
 1. Dos documentos están acoplados bibliográficamente cuando {{< mcq "uno cita al otro" "*comparten referencias" "son citados juntos por un tercero" >}}
 2. Dos documentos citados juntos en la bibliografía de un tercero están {{< fitb "cocitados" ignorecase=true >}}
-3. Según Boyack y Klavans (2010), la citación directa fue el enfoque más preciso para delimitar frentes de investigación. {{< torf false >}}
+3. Según @boyack2010, la citación directa fue el enfoque más preciso para delimitar frentes de investigación. {{< torf false >}}
 4. El número de vínculos de un nodo es su {{< fitb "grado" ignorecase=true >}}
 5. Los nombres de los grupos de un mapa son interpretaciones del analista. {{< torf true >}}
 6. VOSviewer es una herramienta para {{< mcq "gestionar referencias" "*construir y visualizar mapas bibliométricos" "preregistrar estudios" >}}
@@ -208,7 +208,7 @@ Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la
 - Fue la menos precisa en ventanas cortas.
 - *Degree*.
 - Valídalos con lecturas o expertos.
-- van Eck y Waltman (2010).
+- @vaneck2010.
 - Documenta los parámetros.
 - *Betweenness centrality*.
 :::

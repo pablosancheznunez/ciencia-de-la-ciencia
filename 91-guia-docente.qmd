@@ -26,6 +26,8 @@ Cada capítulo incluye actividades de corrección inmediata y laboratorios que s
 
 Las preguntas de autoevaluación están exportadas a **Moodle XML** en la carpeta `moodle/` del repositorio. Se importan desde *Banco de preguntas → Importar → Formato Moodle XML*.
 
+**Descarga el banco de preguntas:** [todo el libro (Moodle XML)](moodle/autoevaluacion_todo.xml) · por capítulo: [00](moodle/autoevaluacion_00_r_en_el_libro.xml) · [01](moodle/autoevaluacion_01_que_es.xml) · [02](moodle/autoevaluacion_02_medir.xml) · [03](moodle/autoevaluacion_03_reproducibilidad.xml) · [04](moodle/autoevaluacion_04_practicas.xml) · [05](moodle/autoevaluacion_05_reformas.xml) · [06](moodle/autoevaluacion_06_evaluacion.xml) · [07](moodle/autoevaluacion_07_fuentes.xml) · [08](moodle/autoevaluacion_08_bibliometria.xml) · [09](moodle/autoevaluacion_09_redes.xml) · [10](moodle/autoevaluacion_10_textos.xml) · [11](moodle/autoevaluacion_11_sintesis.xml) · [12](moodle/autoevaluacion_12_disenos.xml)
+
 ## Diapositivas
 
 Cada capítulo tiene diapositivas con los objetivos, las figuras, las tablas, la lectura obligatoria, preguntas para debatir y el reto: [diapositivas/](diapositivas/index.html){target="_blank"} (F, pantalla completa; S, notas).

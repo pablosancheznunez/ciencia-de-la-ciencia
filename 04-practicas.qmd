@@ -31,9 +31,9 @@ Simmons, J. P.; Nelson, L. D.; Simonsohn, U. (2011). [False-positive psychology:
 
 ### Lecturas complementarias {.unnumbered}
 
-- John, L. K.; Loewenstein, G.; Prelec, D. (2012). [Measuring the prevalence of questionable research practices with incentives for truth telling](https://doi.org/10.1177/0956797611430953). *Psychological Science*, 23(5), 524-532.
-- Fanelli, D. (2010). [«Positive» results increase down the hierarchy of the sciences](https://doi.org/10.1371/journal.pone.0010068). *PLoS ONE*, 5(4), e10068.
-- Smaldino, P. E.; McElreath, R. (2016). [The natural selection of bad science](https://doi.org/10.1098/rsos.160384). *Royal Society Open Science*, 3(9), 160384.
+- @john2012
+- @fanelli2010
+- @smaldino2016
 
 ## 1. Entre la buena práctica y el fraude
 
@@ -49,11 +49,11 @@ La mala conducta científica en sentido estricto se resume en **FFP**: *fabricat
 | **Redondear *p*** | Escribir *p* = 0,05 cuando es 0,054 |
 | **No publicar los resultados nulos** | Guardar en el cajón los estudios que «no salen» |
 
-John et al. (2012) encuestaron a más de 2000 psicólogos con incentivos para responder con sinceridad: muchas de estas prácticas eran admitidas por una proporción considerable, en algunos casos por la mayoría.
+@john2012 encuestaron a más de 2000 psicólogos con incentivos para responder con sinceridad: muchas de estas prácticas eran admitidas por una proporción considerable, en algunos casos por la mayoría.
 
 ## 2. El jardín de los senderos que se bifurcan
 
-Simmons et al. (2011) demostraron con simulaciones que combinar unas pocas decisiones flexibles, cada una defendible por sí sola, puede elevar la tasa de falsos positivos del 5 % nominal a **más del 60 %**. Gelman y Loken llamaron a este problema el «jardín de los senderos que se bifurcan»: aunque solo se haga un análisis, la elección depende de los datos, y otros datos habrían llevado a otro camino.
+@simmons2011 demostraron con simulaciones que combinar unas pocas decisiones flexibles, cada una defendible por sí sola, puede elevar la tasa de falsos positivos del 5 % nominal a **más del 60 %**. Gelman y Loken llamaron a este problema el «jardín de los senderos que se bifurcan»: aunque solo se haga un análisis, la elección depende de los datos, y otros datos habrían llevado a otro camino.
 
 ![El jardín de los senderos que se bifurcan: tres decisiones binarias crean ocho análisis posibles con los mismos datos.](figuras/c4_jardin.svg){#fig-c4-jardin fig-alt="Diagrama en árbol. Desde «Datos» salen dos ramas (excluir atípicos: sí o no), cada una se divide según la variable dependiente (VD1 o VD2) y cada una otra vez según la covariable (sí o no). De los ocho caminos finales, dos dan p menor que 0,05 y seis p mayor que 0,05."}
 
@@ -118,7 +118,7 @@ viewof n_ini = rango("Personas por grupo al inicio", [10, 100], {step: 5, value:
 
 ## 4. Sesgo de publicación
 
-El **sesgo de publicación** aparece cuando la probabilidad de publicar un estudio depende de su resultado. Fanelli (2010) encontró que la proporción de artículos que confirman su hipótesis es altísima en muchas disciplinas y mayor en las ciencias sociales que en las físicas. Si los resultados nulos se quedan en el cajón, la literatura publicada es una muestra sesgada de lo investigado: los metaanálisis heredan el sesgo y sobrestiman los efectos.
+El **sesgo de publicación** aparece cuando la probabilidad de publicar un estudio depende de su resultado. @fanelli2010 encontró que la proporción de artículos que confirman su hipótesis es altísima en muchas disciplinas y mayor en las ciencias sociales que en las físicas. Si los resultados nulos se quedan en el cajón, la literatura publicada es una muestra sesgada de lo investigado: los metaanálisis heredan el sesgo y sobrestiman los efectos.
 
 Algunas señales de alarma en una literatura:
 
@@ -128,7 +128,7 @@ Algunas señales de alarma en una literatura:
 
 ## 5. Incentivos: la selección natural de la mala ciencia
 
-¿Por qué persisten estas prácticas si casi nadie quiere engañar? Smaldino y McElreath (2016) mostraron con un modelo evolutivo que, si se premia sobre todo el **número de publicaciones positivas**, los laboratorios que usan métodos de menor potencia y más flexibles producen más «éxitos», reciben más recursos y forman a más investigadores que copian esos métodos. Sin cambiar los incentivos, la mala ciencia se selecciona sola, aunque las personas actúen de buena fe. Es el puente hacia los capítulos 5 y 6.
+¿Por qué persisten estas prácticas si casi nadie quiere engañar? @smaldino2016 mostraron con un modelo evolutivo que, si se premia sobre todo el **número de publicaciones positivas**, los laboratorios que usan métodos de menor potencia y más flexibles producen más «éxitos», reciben más recursos y forman a más investigadores que copian esos métodos. Sin cambiar los incentivos, la mala ciencia se selecciona sola, aunque las personas actúen de buena fe. Es el puente hacia los capítulos 5 y 6.
 
 ## 6. Calcular con R
 
@@ -254,11 +254,11 @@ Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la
 ::: {.webex-check .webex-box}
 1. Las prácticas de investigación cuestionables son siempre fraude intencionado. {{< torf false >}}
 2. Presentar como hipótesis previa lo descubierto tras analizar los datos se llama {{< fitb "HARKing" ignorecase=true >}}
-3. Según Simmons et al. (2011), combinar varias decisiones flexibles puede elevar la tasa de falsos positivos por encima del {{< mcq "6 %" "15 %" "*60 %" "95 %" >}}
+3. Según @simmons2011, combinar varias decisiones flexibles puede elevar la tasa de falsos positivos por encima del {{< mcq "6 %" "15 %" "*60 %" "95 %" >}}
 4. Mirar los datos a medida que llegan y parar cuando *p* < 0,05 se llama parada {{< fitb "opcional" ignorecase=true >}}
 5. Con dos variables independientes y α = 0,05, la probabilidad de al menos un falso positivo es aproximadamente {{< mcq "5 %" "*10 %" "25 %" >}}
 6. El sesgo de publicación hace que los metaanálisis tiendan a {{< mcq "subestimar los efectos" "*sobrestimar los efectos" "no verse afectados" >}}
-7. Smaldino y McElreath (2016) explican la persistencia de la mala ciencia sobre todo por {{< mcq "la falta de inteligencia de los investigadores" "*los incentivos que premian publicar muchos resultados positivos" "el coste de los ordenadores" >}}
+7. @smaldino2016 explican la persistencia de la mala ciencia sobre todo por {{< mcq "la falta de inteligencia de los investigadores" "*los incentivos que premian publicar muchos resultados positivos" "el coste de los ordenadores" >}}
 8. ¿Qué tienen en común FFP?
 
 {{< longmcq "Son prácticas aceptables en algunas disciplinas" "*Son las tres formas de mala conducta en sentido estricto: fabricación, falsificación y plagio" "Son tipos de sesgo de publicación" >}}

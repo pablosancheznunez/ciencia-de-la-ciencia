@@ -68,7 +68,7 @@ Sesgos que conviene comprobar siempre:
 
 ## Ejemplo resuelto: explorar una muestra de OpenAlex
 
-El archivo del capítulo contiene los 80 artículos más citados que citan al gran proyecto de replicación en psicología de la Open Science Collaboration (2015). Así se explora:
+El archivo del capítulo contiene los 80 artículos más citados que citan al gran proyecto de replicación en psicología de la @opensciencecollabora2015. Así se explora:
 
 ```{webr}
 #| autorun: true
@@ -191,7 +191,7 @@ if (isTRUE(all.equal(as.numeric(.result), esp))) list(correct = TRUE, message = 
 Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la nota.
 
 ::: {.webex-check .webex-box}
-1. Según Visser et al. (2021), las fuentes selectivas como Web of Science cubren más documentos que Dimensions. {{< torf false >}}
+1. Según @visser2021, las fuentes selectivas como Web of Science cubren más documentos que Dimensions. {{< torf false >}}
 2. El identificador persistente para instituciones de investigación es {{< mcq "ORCID" "*ROR" "DOI" >}}
 3. Los datos de OpenAlex se publican con licencia {{< fitb "CC0" ignorecase=true >}}
 4. Un indicador puede cambiar según la fuente de datos utilizada. {{< torf true >}}

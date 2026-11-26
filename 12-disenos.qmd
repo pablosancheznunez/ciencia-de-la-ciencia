@@ -29,7 +29,7 @@ Silberzahn, R.; Uhlmann, E. L.; Martin, D. P.; Anselmi, P.; Aust, F. et al. (201
 
 ### Lectura complementaria {.unnumbered}
 
-- Steegen, S.; Tuerlinckx, F.; Gelman, A.; Vanpaemel, W. (2016). [Increasing transparency through a multiverse analysis](https://doi.org/10.1177/1745691616658637). *Perspectives on Psychological Science*, 11(5), 702-712.
+- @steegen2016
 
 ## 1. Preguntas causales sobre la ciencia
 
@@ -49,8 +49,8 @@ Las condiciones de validez se deben argumentar: en diferencias en diferencias, l
 ## 2. Diseños propios de la metaciencia
 
 - **Replicaciones a gran escala**: muchos equipos repiten estudios publicados con protocolos preregistrados (proyectos de la Open Science Collaboration, Many Labs, el proyecto de reproducibilidad en biología del cáncer). Miden la replicabilidad de un campo, no la de un estudio aislado.
-- **Muchos analistas**: Silberzahn et al. (2018) dieron los mismos datos (¿reciben más tarjetas rojas los futbolistas de piel más oscura?) a 29 equipos. Los efectos estimados variaron mucho (de nulos a claramente positivos) por decisiones analíticas razonables, sin que la experiencia de los equipos explicara las diferencias. La conclusión: **la incertidumbre analítica** es una fuente de variación tan real como la muestral.
-- **Análisis multiverso** (Steegen et al., 2016): en lugar de un único análisis, se ejecutan todas las combinaciones razonables de decisiones (exclusiones, codificaciones, covariables) y se informa de la distribución de resultados. Su versión gráfica es la **curva de especificaciones**.
+- **Muchos analistas**: @silberzahn2018 dieron los mismos datos (¿reciben más tarjetas rojas los futbolistas de piel más oscura?) a 29 equipos. Los efectos estimados variaron mucho (de nulos a claramente positivos) por decisiones analíticas razonables, sin que la experiencia de los equipos explicara las diferencias. La conclusión: **la incertidumbre analítica** es una fuente de variación tan real como la muestral.
+- **Análisis multiverso** [@steegen2016]: en lugar de un único análisis, se ejecutan todas las combinaciones razonables de decisiones (exclusiones, codificaciones, covariables) y se informa de la distribución de resultados. Su versión gráfica es la **curva de especificaciones**.
 - **Estudios de auditoría de la literatura**: codificar sistemáticamente una muestra de artículos (por ejemplo, disponibilidad de datos, preregistro, potencia) para estimar la prevalencia de prácticas.
 
 ## 3. Encuestas, métodos cualitativos y mixtos
@@ -195,7 +195,7 @@ if (isTRUE(all.equal(as.numeric(.result), 48))) list(correct = TRUE, message = "
 Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la nota.
 
 ::: {.webex-check .webex-box}
-1. En Silberzahn et al. (2018), los 29 equipos obtuvieron prácticamente el mismo efecto. {{< torf false >}}
+1. En @silberzahn2018, los 29 equipos obtuvieron prácticamente el mismo efecto. {{< torf false >}}
 2. El supuesto clave de diferencias en diferencias son las tendencias {{< fitb "paralelas" ignorecase=true >}}
 3. Comparar casos justo por encima y por debajo de un umbral es una regresión {{< mcq "lineal" "*discontinua" "logística" >}}
 4. Un análisis multiverso informa de los resultados de todas las combinaciones razonables de decisiones. {{< torf true >}}
@@ -211,7 +211,7 @@ Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la
 - Variaron mucho.
 - Sin intervención, ambos grupos habrían cambiado igual.
 - *Regression discontinuity*.
-- Steegen et al. (2016).
+- @steegen2016.
 - *Specification curve*.
 - Respuestas socialmente aceptables.
 - *Mixed methods*.
